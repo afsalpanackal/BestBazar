@@ -1,0 +1,234 @@
+ %% PLEASE DO NOT MODIFY OR DELETE THIS FILE! %% 
+ %% This file contains information about the installation of an application. %% 
+ %% It will be used to automatically remove all application components from your computer if you choose to do so. %% 
+
+
+NOTE: Beginning of the bootstrapper section
+
+CONFIG: Title: "Ez..Biz Installation Package"
+
+ACTION: RegKey: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion", "SharedDLLs"
+
+ACTION: SystemFile: "C:\Windows\System32\VB6STKIT.DLL"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SystemFile: "C:\Windows\System32\COMCAT.DLL"
+(File currently on disk was already up to date)
+
+ACTION: SystemFile: "C:\Windows\System32\olepro32.dll"
+(File currently on disk was already up to date)
+
+ACTION: SystemFile: "C:\Windows\System32\stdole2.tlb"
+(File currently on disk was already up to date)
+
+ACTION: SystemFile: "C:\Windows\System32\asycfilt.dll"
+(File currently on disk was already up to date)
+
+ACTION: SystemFile: "C:\Windows\System32\oleaut32.dll"
+(File currently on disk was already up to date)
+
+ACTION: SystemFile: "C:\Windows\System32\msvbvm60.dll"
+(File currently on disk was already up to date)
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\COMCAT.DLL"
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\olepro32.dll"
+
+ACTION: TLBRegister: "C:\WINDOWS\SYSTEM32\stdole2.tlb"
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\oleaut32.dll"
+
+ACTION: DllSelfRegister: "C:\WINDOWS\SYSTEM32\msvbvm60.dll"
+
+NOTE: End of the bootstrapper section
+
+NOTE: Now spawning the main Setup program 'Setup1.exe'....
+
+ACTION: CreateDir: "d:\EzBiz"
+
+ACTION: CreateDir: "C:\Users\ur\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Ez Biz"
+
+ACTION: SharedFile: "C:\Windows\system32\COMCTL32.OCX"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\vbalProgBar6.ocx"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\MSFLXGRD.OCX"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\FM20.DLL"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\MSDATLST.OCX"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\MSCOMCT2.OCX"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\MSSTDFMT.DLL"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\MSDATGRD.OCX"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\MSMASK32.OCX"
+(File was not found or was an older version -- new file copied)
+
+ACTION: CreateDir: "C:\Program Files\Common Files\Crystal Decisions"
+
+ACTION: CreateDir: "C:\Program Files\Common Files\Crystal Decisions\2.0"
+
+ACTION: CreateDir: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin"
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\keycode.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2ddisk.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2fxml.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2ftext.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crtslv.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\ExportModeller.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crxf_pdf.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crxf_xls.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crxf_wordw.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crxf_rtf.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\exlate32.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\querybuilder.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crdb_odbc.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crdb_dao.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crdb_ado.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crqe.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\Implode.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\sscsdk80.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u25samp1.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u25dts.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u252000.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2lfinra.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2lexch.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2ldts.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2lcom.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\u2l2000.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\ufmanager.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crtowords_en.dll"
+(File was not found or was an older version -- new file copied)
+
+*** ERROR: C:\Windows\system32\msvcrt.dll
+*** ERROR: An access violation occurred while copying the file.
+*** ERROR: (User Responded with 'Ignore')
+*** DURING THIS ACTION: SharedFile: "C:\Windows\system32\msvcrt.dll"
+
+*** ERROR: C:\Windows\system32\msvcrt.dll
+*** ERROR: An access violation occurred while copying the file.
+*** ERROR: If you ignore a copy error, the file will not be copied.  The application may not function properly as a result.  Do you want to ignore the error?
+*** ERROR: (User Responded with 'Yes')
+*** DURING THIS ACTION: SharedFile: "C:\Windows\system32\msvcrt.dll"
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\unicows.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\craxdrt9.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crviewer9.dll"
+(File was not found or was an older version -- new file copied)
+
+ACTION: SharedFile: "C:\Windows\system32\msado20.tlb"
+(File was not found or was an older version -- new file copied)
+
+ACTION: PrivateFile: "d:\EzBiz\EzBiz.exe"
+(File was not found or was an older version -- new file copied)
+
+ACTION: DllSelfRegister: "C:\Windows\system32\COMCTL32.OCX"
+
+ACTION: DllSelfRegister: "C:\Windows\system32\vbalProgBar6.ocx"
+
+ACTION: DllSelfRegister: "C:\Windows\system32\MSFLXGRD.OCX"
+
+*** ERROR: DllRegisterServer() in the file 'C:\Windows\system32\FM20.DLL' returned failure
+*** DURING THIS ACTION: DllSelfRegister: "C:\Windows\system32\FM20.DLL"
+
+*** ERROR: An error occurred while registering the file 'C:\Windows\system32\FM20.DLL'
+*** ERROR: (User Responded with 'Ignore')
+*** DURING THIS ACTION: DllSelfRegister: "C:\Windows\system32\FM20.DLL"
+
+ACTION: DllSelfRegister: "C:\Windows\system32\MSDATLST.OCX"
+
+ACTION: DllSelfRegister: "C:\Windows\system32\MSCOMCT2.OCX"
+
+ACTION: DllSelfRegister: "C:\Windows\system32\MSSTDFMT.DLL"
+
+ACTION: DllSelfRegister: "C:\Windows\system32\MSDATGRD.OCX"
+
+ACTION: DllSelfRegister: "C:\Windows\system32\MSMASK32.OCX"
+
+ACTION: DllSelfRegister: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\keycode.dll"
+
+ACTION: DllSelfRegister: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crtslv.dll"
+
+ACTION: DllSelfRegister: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\ExportModeller.dll"
+
+ACTION: DllSelfRegister: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crqe.dll"
+
+ACTION: DllSelfRegister: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\craxdrt9.dll"
+
+ACTION: DllSelfRegister: "C:\Program Files\Common Files\Crystal Decisions\2.0\bin\crviewer9.dll"
+
+ACTION: ShellLink: "Ez Biz", "Ez Biz"
+
+ACTION: RegKey: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion", "App Paths\EzBiz.exe"
+
+ACTION: RegValue: "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\EzBiz.exe", ""
+

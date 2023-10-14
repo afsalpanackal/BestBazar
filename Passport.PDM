@@ -1,0 +1,117 @@
+[Root]
+Most Recent Package=PASSPORT SETUP
+
+
+[Package|PASSPORT SETUP|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=F:\Passport Verification\Package
+
+[Package|PASSPORT SETUP|Configure DAO ISAMs]
+Applicable=No
+
+[Package|PASSPORT SETUP|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|PASSPORT SETUP|Files Found]
+
+[Package|PASSPORT SETUP|Files Released]
+
+[Package|PASSPORT SETUP|Missing Dependency Information]
+C:\WINDOWS\system32\FM20.DLL=
+C:\WINDOWS\system32\MSHFLXGD.OCX=
+C:\WINDOWS\system32\MSBIND.DLL=
+C:\WINDOWS\system32\MSSTDFMT.DLL=
+C:\Program Files\Common Files\System\ado\msado20.tlb=
+C:\WINDOWS\system32\MSMASK32.OCX=
+
+[Package|PASSPORT SETUP|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\msflxgrd.ocx=
+C:\WINDOWS\system32\TABCTL32.OCX=
+C:\WINDOWS\system32\MSCOMCT2.OCX=
+C:\WINDOWS\system32\MSADODC.OCX=
+
+[Package|PASSPORT SETUP|Files Added]
+F:\Passport Verification\passport.ldb=
+F:\Passport Verification\passport.mdb=
+F:\Passport Verification\mnu.jpg=
+F:\Passport Verification\log.jpg=
+
+[Package|PASSPORT SETUP|Files Removed]
+
+[Package|PASSPORT SETUP|Files In Project]
+F:\Passport Verification\ChargeSheetedCases.exe=Yes
+C:\WINDOWS\system32\MSVBVM60.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Program Files\Common Files\System\ado\msado20.tlb=Yes
+C:\WINDOWS\system32\MSADODC.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\MSBIND.DLL=Yes
+C:\WINDOWS\system32\MSDATGRD.OCX=Yes
+C:\WINDOWS\system32\MSCOMCT2.OCX=Yes
+C:\WINDOWS\system32\MSDATLST.OCX=Yes
+C:\WINDOWS\system32\MSHFLXGD.OCX=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\FM20.DLL=Yes
+C:\WINDOWS\system32\msflxgrd.ocx=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+F:\Passport Verification\passport.ldb=Yes
+F:\Passport Verification\passport.mdb=Yes
+F:\Passport Verification\mnu.jpg=Yes
+F:\Passport Verification\log.jpg=Yes
+
+[Package|PASSPORT SETUP|Configure Registry Files]
+Applicable=No
+
+[Package|PASSPORT SETUP|Configure Remote Servers]
+Applicable=No
+
+[Package|PASSPORT SETUP|Install Locations]
+F:\Passport Verification\ChargeSheetedCases.exe=$(AppPath)
+C:\WINDOWS\system32\MSVBVM60.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado20.tlb=$(WinSysPath)
+C:\WINDOWS\system32\MSADODC.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSBIND.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSDATGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSCOMCT2.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSDATLST.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSHFLXGD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\FM20.DLL=$(WinSysPath)
+C:\WINDOWS\system32\msflxgrd.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+F:\Passport Verification\passport.ldb=$(AppPath)
+F:\Passport Verification\passport.mdb=$(AppPath)
+F:\Passport Verification\mnu.jpg=$(AppPath)
+F:\Passport Verification\log.jpg=$(AppPath)
+
+[Package|PASSPORT SETUP|Configure Shared Files]
+Applicable=Yes
+F:\Passport Verification\ChargeSheetedCases.exe=Yes
+F:\Passport Verification\passport.ldb=No
+F:\Passport Verification\passport.mdb=Yes
+F:\Passport Verification\mnu.jpg=Yes
+F:\Passport Verification\log.jpg=Yes
+
+[Package|PASSPORT SETUP|Distribution]
+Type=single
+Size=
+Title=PASSPORT VERIFICATION DATA ENTRY SYSTEM

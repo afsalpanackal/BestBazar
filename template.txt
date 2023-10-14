@@ -1,0 +1,18 @@
+<xpml><page quantity='0' pitch='12.0 mm'></xpml>SIZE 78.5 mm, 12 mm
+GAP 3 mm, 0 mm
+DIRECTION 0,0
+REFERENCE 0,0
+OFFSET 0 mm
+SET PEEL OFF
+SET CUTTER OFF
+SET PARTIAL_CUTTER OFF
+<xpml></page></xpml><xpml><page quantity='1' pitch='12.0 mm'></xpml>SET TEAR ON
+CLS
+CODEPAGE 1252
+TEXT 376,31,"0",180,8,8,"SHE WORLD"
+BARCODE 609,95,"128M",53,0,180,2,4,"!10512345678!1009"
+TEXT 573,37,"0",180,8,8,"123456789"
+TEXT 372,54,"0",180,7,7,"BINDI FN-AI"
+TEXT 379,89,"0",180,12,12," 10.00"
+PRINT 1,1
+<xpml></page></xpml><xpml><end/></xpml>

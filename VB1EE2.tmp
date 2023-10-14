@@ -1,0 +1,2195 @@
+VERSION 5.00
+Object = "{C932BA88-4374-101B-A56C-00AA003668DC}#1.1#0"; "msmask32.ocx"
+Object = "{CDE57A40-8B86-11D0-B3C6-00A0C90AEA82}#1.0#0"; "msdatgrd.ocx"
+Object = "{F0D2F211-CCB0-11D0-A316-00AA00688B10}#1.0#0"; "msdatlst.ocx"
+Object = "{0D452EE1-E08F-101A-852E-02608C4D0BB4}#2.0#0"; "FM20.DLL"
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "msflxgrd.ocx"
+Begin VB.Form FRMESTIMATE 
+   BorderStyle     =   1  'Fixed Single
+   Caption         =   "RETAIL BILL ENTRY"
+   ClientHeight    =   9060
+   ClientLeft      =   45
+   ClientTop       =   435
+   ClientWidth     =   16740
+   Icon            =   "FrmretailBill.frx":0000
+   KeyPreview      =   -1  'True
+   LockControls    =   -1  'True
+   MaxButton       =   0   'False
+   MDIChild        =   -1  'True
+   MinButton       =   0   'False
+   ScaleHeight     =   9060
+   ScaleWidth      =   16740
+   Begin VB.Frame fRMEPRERATE 
+      BackColor       =   &H00C0FFFF&
+      BorderStyle     =   0  'None
+      Height          =   3060
+      Left            =   1950
+      TabIndex        =   76
+      Top             =   3045
+      Visible         =   0   'False
+      Width           =   8955
+      Begin MSDataGridLib.DataGrid GRDPRERATE 
+         Height          =   2535
+         Left            =   90
+         TabIndex        =   77
+         Top             =   480
+         Width           =   8775
+         _ExtentX        =   15478
+         _ExtentY        =   4471
+         _Version        =   393216
+         AllowUpdate     =   -1  'True
+         AllowArrows     =   -1  'True
+         Appearance      =   0
+         BackColor       =   16777215
+         ForeColor       =   0
+         HeadLines       =   1
+         RowHeight       =   19
+         RowDividerStyle =   4
+         BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColumnCount     =   2
+         BeginProperty Column00 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         BeginProperty Column01 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         SplitCount      =   1
+         BeginProperty Split0 
+            SizeMode        =   1
+            BeginProperty Column00 
+            EndProperty
+            BeginProperty Column01 
+            EndProperty
+         EndProperty
+      End
+      Begin VB.Label LBLHEAD 
+         BackColor       =   &H00000000&
+         Caption         =   "MEDICINE"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   14.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000FF00&
+         Height          =   360
+         Index           =   2
+         Left            =   3705
+         TabIndex        =   79
+         Top             =   105
+         Width           =   5160
+      End
+      Begin VB.Label LBLHEAD 
+         BackColor       =   &H00000000&
+         Caption         =   " PREVIOUS RATES FOR THE ITEM "
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   14.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000FFFF&
+         Height          =   360
+         Index           =   1
+         Left            =   90
+         TabIndex        =   78
+         Top             =   105
+         Width           =   3615
+      End
+   End
+   Begin VB.Frame FRMEITEM 
+      BackColor       =   &H00C0E0FF&
+      BorderStyle     =   0  'None
+      Height          =   3270
+      Left            =   900
+      TabIndex        =   45
+      Top             =   2940
+      Visible         =   0   'False
+      Width           =   10965
+      Begin MSDataGridLib.DataGrid GRDPOPUPITEM 
+         Height          =   3165
+         Left            =   45
+         TabIndex        =   46
+         Top             =   60
+         Width           =   10860
+         _ExtentX        =   19156
+         _ExtentY        =   5583
+         _Version        =   393216
+         AllowUpdate     =   -1  'True
+         AllowArrows     =   -1  'True
+         Appearance      =   0
+         BackColor       =   16777215
+         ForeColor       =   0
+         HeadLines       =   1
+         RowHeight       =   23
+         RowDividerStyle =   4
+         BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   9
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColumnCount     =   2
+         BeginProperty Column00 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         BeginProperty Column01 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         SplitCount      =   1
+         BeginProperty Split0 
+            SizeMode        =   1
+            BeginProperty Column00 
+            EndProperty
+            BeginProperty Column01 
+            EndProperty
+         EndProperty
+      End
+   End
+   Begin VB.Frame FRMEGRDTMP 
+      BackColor       =   &H00C0FFFF&
+      BorderStyle     =   0  'None
+      Height          =   2985
+      Left            =   2280
+      TabIndex        =   41
+      Top             =   3045
+      Visible         =   0   'False
+      Width           =   7590
+      Begin MSDataGridLib.DataGrid GRDPOPUP 
+         Height          =   2565
+         Left            =   90
+         TabIndex        =   44
+         Top             =   360
+         Width           =   7425
+         _ExtentX        =   13097
+         _ExtentY        =   4524
+         _Version        =   393216
+         AllowUpdate     =   -1  'True
+         AllowArrows     =   -1  'True
+         Appearance      =   0
+         BackColor       =   16777215
+         ForeColor       =   0
+         HeadLines       =   1
+         RowHeight       =   23
+         RowDividerStyle =   4
+         BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColumnCount     =   2
+         BeginProperty Column00 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         BeginProperty Column01 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         SplitCount      =   1
+         BeginProperty Split0 
+            SizeMode        =   1
+            BeginProperty Column00 
+            EndProperty
+            BeginProperty Column01 
+            EndProperty
+         EndProperty
+      End
+      Begin VB.Label LBLHEAD 
+         BackColor       =   &H00000000&
+         Caption         =   "BATCH WISE LIST FOR THE ITEM "
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000FFFF&
+         Height          =   240
+         Index           =   9
+         Left            =   90
+         TabIndex        =   43
+         Top             =   105
+         Visible         =   0   'False
+         Width           =   3045
+      End
+      Begin VB.Label LBLHEAD 
+         BackColor       =   &H00000000&
+         Caption         =   "MEDICINE"
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H0000FF00&
+         Height          =   240
+         Index           =   0
+         Left            =   3135
+         TabIndex        =   42
+         Top             =   105
+         Visible         =   0   'False
+         Width           =   4380
+      End
+   End
+   Begin VB.Frame FRMEMAIN 
+      BorderStyle     =   0  'None
+      Height          =   9015
+      Left            =   -150
+      TabIndex        =   11
+      Top             =   -15
+      Width           =   16770
+      Begin VB.TextBox txtexpirydate 
+         Appearance      =   0  'Flat
+         BeginProperty Font 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H000000FF&
+         Height          =   285
+         Left            =   13950
+         MaxLength       =   15
+         TabIndex        =   47
+         Top             =   8685
+         Visible         =   0   'False
+         Width           =   930
+      End
+      Begin VB.Frame FRMEHEAD 
+         BackColor       =   &H00C0FFC0&
+         ForeColor       =   &H008080FF&
+         Height          =   2460
+         Left            =   210
+         TabIndex        =   34
+         Top             =   -75
+         Width           =   16560
+         Begin VB.TextBox TxtCode 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   360
+            Left            =   90
+            TabIndex        =   165
+            Top             =   855
+            Width           =   1890
+         End
+         Begin VB.TextBox TxtVehicle 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   330
+            Left            =   6825
+            MaxLength       =   35
+            TabIndex        =   160
+            Top             =   2100
+            Width           =   2625
+         End
+         Begin VB.Frame Frame5 
+            BackColor       =   &H00C0FFC0&
+            Caption         =   "Actual Address"
+            BeginProperty Font 
+               Name            =   "Arial"
+               Size            =   8.25
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000C0&
+            Height          =   2310
+            Left            =   9480
+            TabIndex        =   136
+            Top             =   90
+            Width           =   3705
+            Begin VB.TextBox TXTTIN 
+               Appearance      =   0  'Flat
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H000000FF&
+               Height          =   330
+               Left            =   735
+               MaxLength       =   35
+               TabIndex        =   138
+               Top             =   1500
+               Width           =   2925
+            End
+            Begin VB.TextBox TxtPhone 
+               Appearance      =   0  'Flat
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H000000FF&
+               Height          =   330
+               Left            =   735
+               MaxLength       =   35
+               TabIndex        =   137
+               Top             =   1905
+               Width           =   2925
+            End
+            Begin VB.Label lbladdress 
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   400
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   1230
+               Left            =   45
+               TabIndex        =   141
+               Top             =   210
+               Width           =   3615
+            End
+            Begin VB.Label Label1 
+               BackStyle       =   0  'Transparent
+               Caption         =   "Tin No."
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   300
+               Index           =   41
+               Left            =   75
+               TabIndex        =   140
+               Top             =   1515
+               Width           =   660
+            End
+            Begin VB.Label Label1 
+               BackStyle       =   0  'Transparent
+               Caption         =   "Phone"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   300
+               Index           =   35
+               Left            =   75
+               TabIndex        =   139
+               Top             =   1920
+               Width           =   660
+            End
+         End
+         Begin VB.TextBox TXTTYPE 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   300
+            Left            =   6360
+            TabIndex        =   8
+            Top             =   2175
+            Visible         =   0   'False
+            Width           =   630
+         End
+         Begin VB.ComboBox cmbtype 
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00004080&
+            Height          =   315
+            ItemData        =   "FrmretailBill.frx":030A
+            Left            =   6855
+            List            =   "FrmretailBill.frx":0317
+            Style           =   2  'Dropdown List
+            TabIndex        =   9
+            Top             =   1755
+            Width           =   2580
+         End
+         Begin VB.Frame Frame1 
+            BackColor       =   &H00C0FFC0&
+            Caption         =   "Billing Address"
+            BeginProperty Font 
+               Name            =   "Arial"
+               Size            =   8.25
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000C0&
+            Height          =   1650
+            Left            =   5610
+            TabIndex        =   59
+            Top             =   90
+            Width           =   3810
+            Begin VB.TextBox TxtBillName 
+               Appearance      =   0  'Flat
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H000000FF&
+               Height          =   330
+               Left            =   90
+               MaxLength       =   35
+               TabIndex        =   6
+               Top             =   225
+               Width           =   3645
+            End
+            Begin MSForms.TextBox TxtBillAddress 
+               Height          =   1005
+               Left            =   90
+               TabIndex        =   7
+               Top             =   585
+               Width           =   3645
+               VariousPropertyBits=   -1400879077
+               MaxLength       =   100
+               BorderStyle     =   1
+               Size            =   "6429;1773"
+               SpecialEffect   =   0
+               FontHeight      =   195
+               FontCharSet     =   0
+               FontPitchAndFamily=   2
+            End
+         End
+         Begin VB.TextBox txtcrdays 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   300
+            Left            =   4680
+            TabIndex        =   2
+            Top             =   525
+            Width           =   900
+         End
+         Begin VB.TextBox TXTDEALER 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00FF0000&
+            Height          =   360
+            Left            =   2010
+            TabIndex        =   3
+            Top             =   855
+            Width           =   3570
+         End
+         Begin VB.TextBox txtBillNo 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   315
+            Left            =   1305
+            TabIndex        =   0
+            Top             =   150
+            Width           =   885
+         End
+         Begin MSMask.MaskEdBox TXTINVDATE 
+            Height          =   300
+            Left            =   4185
+            TabIndex        =   1
+            Top             =   165
+            Width           =   1395
+            _ExtentX        =   2461
+            _ExtentY        =   529
+            _Version        =   393216
+            Appearance      =   0
+            Enabled         =   0   'False
+            MaxLength       =   10
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Mask            =   "##/##/####"
+            PromptChar      =   " "
+         End
+         Begin MSDataListLib.DataList DataList2 
+            Height          =   780
+            Left            =   2025
+            TabIndex        =   4
+            Top             =   1230
+            Width           =   3555
+            _ExtentX        =   6271
+            _ExtentY        =   1376
+            _Version        =   393216
+            Appearance      =   0
+            ForeColor       =   16711680
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin MSDataListLib.DataCombo CMBDISTI 
+            Height          =   2055
+            Left            =   13485
+            TabIndex        =   10
+            Top             =   2070
+            Visible         =   0   'False
+            Width           =   2955
+            _ExtentX        =   5212
+            _ExtentY        =   3625
+            _Version        =   393216
+            Appearance      =   0
+            Style           =   1
+            ForeColor       =   255
+            Text            =   ""
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "Vehicle No."
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   47
+            Left            =   5715
+            TabIndex        =   159
+            Top             =   2100
+            Width           =   1110
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            BackStyle       =   0  'Transparent
+            Caption         =   "RETAIL BILL"
+            BeginProperty Font 
+               Name            =   "Arial"
+               Size            =   24
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   -1  'True
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H0000C000&
+            Height          =   1260
+            Index           =   46
+            Left            =   13095
+            TabIndex        =   158
+            Top             =   435
+            Width           =   3450
+         End
+         Begin MSForms.ComboBox TXTAREA 
+            Height          =   330
+            Left            =   2025
+            TabIndex        =   5
+            Top             =   2055
+            Width           =   3585
+            VariousPropertyBits=   746604571
+            ForeColor       =   255
+            MaxLength       =   20
+            DisplayStyle    =   3
+            Size            =   "6324;582"
+            MatchEntry      =   1
+            ShowDropButtonWhen=   2
+            DropButtonStyle =   0
+            BorderColor     =   255
+            FontName        =   "Tahoma"
+            FontEffects     =   1073741825
+            FontHeight      =   180
+            FontCharSet     =   0
+            FontPitchAndFamily=   2
+            FontWeight      =   700
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "AREA"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   40
+            Left            =   1065
+            TabIndex        =   75
+            Top             =   2085
+            Width           =   825
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "3.   WS"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   165
+            Index           =   39
+            Left            =   7020
+            TabIndex        =   74
+            Top             =   2085
+            Visible         =   0   'False
+            Width           =   615
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "2.   RT"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000040C0&
+            Height          =   165
+            Index           =   38
+            Left            =   6165
+            TabIndex        =   73
+            Top             =   2070
+            Visible         =   0   'False
+            Width           =   585
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "1.   VP"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00C000C0&
+            Height          =   165
+            Index           =   37
+            Left            =   5310
+            TabIndex        =   72
+            Top             =   2055
+            Visible         =   0   'False
+            Width           =   675
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "Billing Type"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   16
+            Left            =   5655
+            TabIndex        =   61
+            Top             =   1770
+            Width           =   1110
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "Agent"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   330
+            Index           =   3
+            Left            =   12810
+            TabIndex        =   60
+            Top             =   2055
+            Visible         =   0   'False
+            Width           =   615
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "Credit Days"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Index           =   32
+            Left            =   3480
+            TabIndex        =   58
+            Top             =   525
+            Width           =   1140
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "CUSTOMER"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   300
+            Index           =   2
+            Left            =   930
+            TabIndex        =   49
+            Top             =   1305
+            Width           =   1230
+         End
+         Begin VB.Label INVDATE 
+            BackStyle       =   0  'Transparent
+            Caption         =   "INV DATE"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   255
+            Index           =   8
+            Left            =   3240
+            TabIndex        =   48
+            Top             =   180
+            Width           =   960
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "INVOICE NO."
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Index           =   0
+            Left            =   105
+            TabIndex        =   38
+            Top             =   195
+            Width           =   1230
+         End
+         Begin VB.Label Label1 
+            BackStyle       =   0  'Transparent
+            Caption         =   "Entry Date"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   255
+            Index           =   1
+            Left            =   105
+            TabIndex        =   37
+            Top             =   495
+            Visible         =   0   'False
+            Width           =   1170
+         End
+         Begin VB.Label LBLDATE 
+            Alignment       =   2  'Center
+            BorderStyle     =   1  'Fixed Single
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   1305
+            TabIndex        =   36
+            Top             =   930
+            Visible         =   0   'False
+            Width           =   1215
+         End
+         Begin VB.Label LBLBILLNO 
+            Alignment       =   2  'Center
+            BorderStyle     =   1  'Fixed Single
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   315
+            Left            =   1305
+            TabIndex        =   35
+            Top             =   150
+            Width           =   885
+         End
+      End
+      Begin VB.Frame Frame2 
+         BackColor       =   &H00C0FFC0&
+         ForeColor       =   &H008080FF&
+         Height          =   5055
+         Left            =   210
+         TabIndex        =   39
+         Top             =   2280
+         Width           =   16560
+         Begin VB.Frame Frame3 
+            BackColor       =   &H0080FF80&
+            Height          =   4560
+            Left            =   13230
+            TabIndex        =   115
+            Top             =   120
+            Width           =   3285
+            Begin VB.CommandButton CMDDELIVERY 
+               BackColor       =   &H00FF8080&
+               Caption         =   "Add Delivered Items"
+               Enabled         =   0   'False
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   525
+               Left            =   60
+               Style           =   1  'Graphical
+               TabIndex        =   135
+               Top             =   3975
+               Width           =   1575
+            End
+            Begin VB.CommandButton CMDSALERETURN 
+               Appearance      =   0  'Flat
+               BackColor       =   &H000080FF&
+               Caption         =   "Add Reurned Items"
+               Enabled         =   0   'False
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   8.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               Height          =   525
+               Left            =   1695
+               MaskColor       =   &H008080FF&
+               Style           =   1  'Graphical
+               TabIndex        =   134
+               Top             =   3975
+               Width           =   1530
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "PROFIT AMT"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   45
+               Left            =   1770
+               TabIndex        =   157
+               Top             =   2625
+               Visible         =   0   'False
+               Width           =   1425
+            End
+            Begin VB.Label LblProfitAmt 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   495
+               Left            =   1770
+               TabIndex        =   156
+               Top             =   2895
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "PROFIT %"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   44
+               Left            =   195
+               TabIndex        =   155
+               Top             =   2625
+               Visible         =   0   'False
+               Width           =   1425
+            End
+            Begin VB.Label LblProfitPerc 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   495
+               Left            =   195
+               TabIndex        =   154
+               Top             =   2895
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label LBLTOTAL 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               Caption         =   "Label2"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   500
+               Left            =   195
+               TabIndex        =   133
+               Top             =   330
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               BackStyle       =   0  'Transparent
+               Caption         =   "GROSS AMOUNT"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   6
+               Left            =   180
+               TabIndex        =   132
+               Top             =   105
+               Width           =   1485
+            End
+            Begin VB.Label lblnetamount 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   495
+               Left            =   195
+               TabIndex        =   131
+               Top             =   1245
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "NET AMOUNT"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   23
+               Left            =   195
+               TabIndex        =   130
+               Top             =   1005
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "TOTAL COST"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   25
+               Left            =   1785
+               TabIndex        =   129
+               Top             =   105
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label LBLPROFIT 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   495
+               Left            =   1785
+               TabIndex        =   128
+               Top             =   1245
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label LBLITEMCOST 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   495
+               Left            =   1785
+               TabIndex        =   127
+               Top             =   2070
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label LBLSELPRICE 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   495
+               Left            =   285
+               TabIndex        =   126
+               Top             =   3345
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BackStyle       =   0  'Transparent
+               Caption         =   "ITEM COST"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   27
+               Left            =   1785
+               TabIndex        =   125
+               Top             =   1845
+               Visible         =   0   'False
+               Width           =   1425
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "SELLING PRICE"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   28
+               Left            =   285
+               TabIndex        =   124
+               Top             =   3120
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label LBLFOT 
+               Alignment       =   2  'Center
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H000000FF&
+               Height          =   495
+               Left            =   195
+               TabIndex        =   123
+               Top             =   4050
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "Tax On Free"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   31
+               Left            =   165
+               TabIndex        =   122
+               Top             =   3780
+               Visible         =   0   'False
+               Width           =   1455
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "DISC AMOUNT"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   4
+               Left            =   195
+               TabIndex        =   121
+               Top             =   1845
+               Width           =   1440
+            End
+            Begin VB.Label LBLDISCAMT 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00800080&
+               Height          =   495
+               Left            =   195
+               TabIndex        =   120
+               Top             =   2085
+               Width           =   1440
+            End
+            Begin VB.Label lblcomamt 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00800080&
+               Height          =   495
+               Left            =   1755
+               TabIndex        =   119
+               Top             =   4095
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "Com Amt"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   36
+               Left            =   1740
+               TabIndex        =   118
+               Top             =   3840
+               Visible         =   0   'False
+               Width           =   1455
+            End
+            Begin VB.Label LBLTOTALCOST 
+               Alignment       =   2  'Center
+               Appearance      =   0  'Flat
+               BackColor       =   &H80000005&
+               BorderStyle     =   1  'Fixed Single
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   14.25
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H80000008&
+               Height          =   495
+               Left            =   1785
+               TabIndex        =   117
+               Top             =   330
+               Visible         =   0   'False
+               Width           =   1440
+            End
+            Begin VB.Label Label1 
+               Alignment       =   2  'Center
+               BackStyle       =   0  'Transparent
+               Caption         =   "TOTAL PROFIT"
+               BeginProperty Font 
+                  Name            =   "Tahoma"
+                  Size            =   9.75
+                  Charset         =   0
+                  Weight          =   700
+                  Underline       =   0   'False
+                  Italic          =   0   'False
+                  Strikethrough   =   0   'False
+               EndProperty
+               ForeColor       =   &H00008000&
+               Height          =   375
+               Index           =   26
+               Left            =   1785
+               TabIndex        =   116
+               Top             =   975
+               Visible         =   0   'False
+               Width           =   1425
+            End
+         End
+         Begin VB.TextBox TXTAMOUNT 
+            Appearance      =   0  'Flat
+            Enabled         =   0   'False
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   345
+            Left            =   7950
+            TabIndex        =   57
+            Top             =   5805
+            Visible         =   0   'False
+            Width           =   1080
+         End
+         Begin VB.TextBox TXTTOTALDISC 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   345
+            Left            =   12210
+            TabIndex        =   56
+            Top             =   4650
+            Width           =   930
+         End
+         Begin VB.OptionButton OPTDISCPERCENT 
+            BackColor       =   &H0080FF80&
+            Caption         =   "Disc %"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   345
+            Left            =   10125
+            TabIndex        =   55
+            Top             =   4650
+            Value           =   -1  'True
+            Width           =   945
+         End
+         Begin VB.OptionButton OptDiscAmt 
+            BackColor       =   &H0080FF80&
+            Caption         =   "Disc Amt"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   345
+            Left            =   11070
+            TabIndex        =   54
+            Top             =   4650
+            Width           =   1125
+         End
+         Begin MSFlexGridLib.MSFlexGrid grdsales 
+            Height          =   4485
+            Left            =   90
+            TabIndex        =   12
+            Top             =   150
+            Width           =   13110
+            _ExtentX        =   23125
+            _ExtentY        =   7911
+            _Version        =   393216
+            Rows            =   1
+            Cols            =   31
+            FixedRows       =   0
+            FixedCols       =   0
+            RowHeightMin    =   450
+            BackColorFixed  =   0
+            ForeColorFixed  =   65535
+            SelectionMode   =   1
+            AllowUserResizing=   1
+            Appearance      =   0
+            GridLineWidth   =   2
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "Tahoma"
+               Size            =   11.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+         End
+         Begin VB.Label lblunit 
+            BackColor       =   &H00FFFFFF&
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   300
+            Left            =   6465
+            TabIndex        =   151
+            Top             =   4695
+            Width           =   765
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            BackColor       =   &H00000000&
+            Caption         =   "per"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H0000FFFF&
+            Height          =   300
+            Index           =   42
+            Left            =   4980
+            TabIndex        =   150
+            Top             =   4695
+            Width           =   600
+         End
+         Begin VB.Label lblpack 
+            BackColor       =   &H00FFFFFF&
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   300
+            Left            =   5580
+            TabIndex        =   149
+            Top             =   4695
+            Width           =   855
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            BackColor       =   &H00000000&
+            Caption         =   "on Pack"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H0000FFFF&
+            Height          =   285
+            Index           =   34
+            Left            =   9405
+            TabIndex        =   71
+            Top             =   4920
+            Visible         =   0   'False
+            Width           =   780
+         End
+         Begin VB.Label lblcrtnpack 
+            BackColor       =   &H00FFFFFF&
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   285
+            Left            =   10185
+            TabIndex        =   70
+            Top             =   4920
+            Visible         =   0   'False
+            Width           =   615
+         End
+         Begin VB.Label lblcase 
+            BackColor       =   &H00FFFFFF&
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   285
+            Left            =   8550
+            TabIndex        =   69
+            Top             =   4920
+            Visible         =   0   'False
+            Width           =   855
+         End
+         Begin VB.Label lblvan 
+            BackColor       =   &H00FFFFFF&
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   300
+            Left            =   4050
+            TabIndex        =   68
+            Top             =   4695
+            Width           =   855
+         End
+         Begin VB.Label lblwsale 
+            BackColor       =   &H00FFFFFF&
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   300
+            Left            =   2325
+            TabIndex        =   67
+            Top             =   4695
+            Width           =   855
+         End
+         Begin VB.Label lblretail 
+            BackColor       =   &H00FFFFFF&
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   204
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H00000000&
+            Height          =   300
+            Left            =   720
+            TabIndex        =   66
+            Top             =   4695
+            Width           =   855
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            BackColor       =   &H00000000&
+            Caption         =   "C/S"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H0000FFFF&
+            Height          =   285
+            Index           =   33
+            Left            =   7965
+            TabIndex        =   65
+            Top             =   4920
+            Visible         =   0   'False
+            Width           =   600
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            BackColor       =   &H00000000&
+            Caption         =   "Scheme"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H0000FFFF&
+            Height          =   300
+            Index           =   30
+            Left            =   3240
+            TabIndex        =   64
+            Top             =   4695
+            Width           =   795
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            BackColor       =   &H00000000&
+            Caption         =   "WS"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H0000FFFF&
+            Height          =   300
+            Index           =   22
+            Left            =   1635
+            TabIndex        =   63
+            Top             =   4695
+            Width           =   690
+         End
+         Begin VB.Label Label1 
+            Alignment       =   2  'Center
+            BackColor       =   &H00000000&
+            Caption         =   "RT"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   9.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H0000FFFF&
+            Height          =   300
+            Index           =   21
+            Left            =   90
+            TabIndex        =   62
+            Top             =   4695
+            Width           =   645
+         End
+      End
+      Begin MSDataGridLib.DataGrid grdtmp 
+         Height          =   465
+         Left            =   11100
+         TabIndex        =   40
+         Top             =   5130
+         Visible         =   0   'False
+         Width           =   4665
+         _ExtentX        =   8229
+         _ExtentY        =   820
+         _Version        =   393216
+         AllowUpdate     =   -1  'True
+         AllowArrows     =   -1  'True
+         Appearance      =   0
+         BackColor       =   16777215
+         ForeColor       =   0
+         HeadLines       =   1
+         RowHeight       =   15
+         RowDividerStyle =   4
+         BeginProperty HeadFont {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ColumnCount     =   2
+         BeginProperty Column00 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         BeginProperty Column01 
+            DataField       =   ""
+            Caption         =   ""
+            BeginProperty DataFormat {6D835690-900B-11D0-9484-00A0C91110ED} 
+               Type            =   0
+               Format          =   ""
+               HaveTrueFalseNull=   0
+               FirstDayOfWeek  =   0
+               FirstWeekOfYear =   0
+               LCID            =   1033
+               SubFormatType   =   0
+            EndProperty
+         EndProperty
+         SplitCount      =   1
+         BeginProperty Split0 
+            SizeMode        =   1
+            BeginProperty Column00 
+            EndProperty
+            BeginProperty Column01 
+            EndProperty
+         EndProperty
+      End
+      Begin VB.Frame Frame4 
+         BackColor       =   &H00C0FFC0&
+         ForeColor       =   &H008080FF&
+         Height          =   1785
+         Left            =   210
+         TabIndex        =   80
+         Top             =   7245
+         Width           =   16560
+         Begin VB.CommandButton CMDDOS 
+            Caption         =   "&DOS Print"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   405
+            Left            =   5730
+            TabIndex        =   166
+            Top             =   1185
+            Width           =   1095
+         End
+         Begin VB.TextBox txtOutstanding 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   300
+            Left            =   120
+            TabIndex        =   164
+            Top             =   735
+            Width           =   1140
+         End
+         Begin VB.CommandButton CmdPrintA5 
+            Caption         =   "&PRINT -A5"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   405
+            Left            =   8025
+            TabIndex        =   31
+            Top             =   1185
+            Width           =   1110
+         End
+         Begin VB.CommandButton cmddeleteall 
+            Caption         =   "Cancel Bill"
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   6.75
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            Height          =   405
+            Left            =   12120
+            TabIndex        =   153
+            Top             =   1185
+            Width           =   1100
+         End
+         Begin VB.TextBox txtappendcomm 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   300
+            Left            =   15015
+            MaxLength       =   8
+            TabIndex        =   145
+            Top             =   1155
+            Visible         =   0   'False
+            Width           =   1200
+         End
+         Begin VB.TextBox TXTAPPENDTOTAL 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   300
+            Left            =   15045
+            MaxLength       =   8
+            TabIndex        =   144
+            Top             =   960
+            Visible         =   0   'False
+            Width           =   1200
+         End
+         Begin VB.TextBox TXTFREEAPPEND 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   300
+            Left            =   15045
+            MaxLength       =   8
+            TabIndex        =   143
+            Top             =   1320
+            Visible         =   0   'False
+            Width           =   1200
+         End
+         Begin VB.TextBox TXTAPPENDQTY 
+            Appearance      =   0  'Flat
+            BeginProperty Font 
+               Name            =   "Tahoma"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   700
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            ForeColor       =   &H000000FF&
+            Height          =   300
+            Left            =   13755
+            MaxLength       =   8
+            TabIndex        =   142
+            Top             =   1335
+            Visible         =   0   'False
+            Width           =   1200
+         End
+         Begin VB.TextBox txtcategory 
+            Appeara

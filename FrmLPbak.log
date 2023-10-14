@@ -1,0 +1,6 @@
+Line 83: Class MSDataGridLib.DataGrid of control grdtmp was not a loaded control class.
+Line 266: Class MSMask.MaskEdBox of control TXTINVDATE was not a loaded control class.
+Line 289: Class MSDataListLib.DataList of control DataList2 was not a loaded control class.
+Line 459: Class MSFlexGridLib.MSFlexGrid of control grdsales was not a loaded control class.
+Line 1151: Class MSMask.MaskEdBox of control TXTEXPIRY was not a loaded control class.
+Line 1175: Class MSMask.MaskEdBox of control TXTEXPDATE was not a loaded control class.

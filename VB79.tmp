@@ -1,0 +1,1684 @@
+VERSION 5.00
+Object = "{0D452EE1-E08F-101A-852E-02608C4D0BB4}#2.0#0"; "FM20.DLL"
+Object = "{55473EAC-7715-4257-B5EF-6E14EBD6A5DD}#1.0#0"; "vbalProgBar6.ocx"
+Object = "{6B7E6392-850A-101B-AFC0-4210102A8DA7}#1.3#0"; "comctl32.ocx"
+Begin VB.MDIForm MDIMAIN 
+   BackColor       =   &H00FFFFFF&
+   Caption         =   "Ez..Biz INVENTORY"
+   ClientHeight    =   8190
+   ClientLeft      =   165
+   ClientTop       =   855
+   ClientWidth     =   11880
+   Icon            =   "MDIMAIN.frx":0000
+   LinkTopic       =   "MDIForm1"
+   LockControls    =   -1  'True
+   Moveable        =   0   'False
+   Picture         =   "MDIMAIN.frx":3873F
+   StartUpPosition =   3  'Windows Default
+   WindowState     =   2  'Maximized
+   Begin ComctlLib.StatusBar StatusBar 
+      Align           =   2  'Align Bottom
+      Height          =   450
+      Left            =   0
+      TabIndex        =   14
+      Top             =   7740
+      Width           =   11880
+      _ExtentX        =   20955
+      _ExtentY        =   794
+      SimpleText      =   ""
+      _Version        =   327682
+      BeginProperty Panels {0713E89E-850A-101B-AFC0-4210102A8DA7} 
+         NumPanels       =   4
+         BeginProperty Panel1 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            AutoSize        =   1
+            Object.Width           =   8819
+            MinWidth        =   8819
+            Key             =   ""
+            Object.Tag             =   ""
+         EndProperty
+         BeginProperty Panel2 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            Object.Width           =   8819
+            MinWidth        =   8819
+            Key             =   ""
+            Object.Tag             =   ""
+         EndProperty
+         BeginProperty Panel3 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            Object.Width           =   8819
+            MinWidth        =   8819
+            Key             =   ""
+            Object.Tag             =   ""
+         EndProperty
+         BeginProperty Panel4 {0713E89F-850A-101B-AFC0-4210102A8DA7} 
+            AutoSize        =   2
+            Object.Width           =   8811
+            MinWidth        =   8819
+            Key             =   ""
+            Object.Tag             =   ""
+         EndProperty
+      EndProperty
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+   End
+   Begin VB.PictureBox PCTMENU 
+      Align           =   1  'Align Top
+      BackColor       =   &H00FFFFFF&
+      BorderStyle     =   0  'None
+      Height          =   570
+      Left            =   0
+      ScaleHeight     =   570
+      ScaleWidth      =   11880
+      TabIndex        =   8
+      Top             =   0
+      Width           =   11880
+      Begin vbalProgBarLib6.vbalProgressBar vbalProgressBar1 
+         Height          =   495
+         Left            =   11625
+         TabIndex        =   11
+         Tag             =   "5"
+         Top             =   30
+         Visible         =   0   'False
+         Width           =   4170
+         _ExtentX        =   7355
+         _ExtentY        =   873
+         Picture         =   "MDIMAIN.frx":42CFF
+         ForeColor       =   0
+         Appearance      =   0
+         BorderStyle     =   2
+         BarColor        =   16384
+         BarPicture      =   "MDIMAIN.frx":42D1B
+         BarPictureMode  =   0
+         BackPictureMode =   0
+         Max             =   150
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         XpStyle         =   -1  'True
+      End
+      Begin MSForms.CommandButton CmdRetailBill 
+         Height          =   540
+         Left            =   9960
+         TabIndex        =   6
+         Top             =   0
+         Width           =   1620
+         ForeColor       =   16777215
+         BackColor       =   4194304
+         Caption         =   "Retail Sale Bill"
+         PicturePosition =   327683
+         Size            =   "2857;952"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton CmdWO 
+         Height          =   390
+         Left            =   17355
+         TabIndex        =   13
+         Top             =   0
+         Visible         =   0   'False
+         Width           =   945
+         ForeColor       =   16777215
+         BackColor       =   16777215
+         PicturePosition =   327683
+         Size            =   "1667;688"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton cmdtest 
+         Height          =   405
+         Left            =   11565
+         TabIndex        =   12
+         Top             =   -285
+         Visible         =   0   'False
+         Width           =   990
+         ForeColor       =   16777215
+         BackColor       =   128
+         VariousPropertyBits=   8388635
+         Caption         =   "test"
+         PicturePosition =   327683
+         Size            =   "1746;714"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton CommandButton2 
+         Height          =   540
+         Left            =   8325
+         TabIndex        =   5
+         Top             =   0
+         Width           =   1620
+         ForeColor       =   16777215
+         BackColor       =   8388736
+         Caption         =   "Delivery"
+         PicturePosition =   327683
+         Size            =   "2857;952"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton CMDBILLRETAIL 
+         Height          =   540
+         Left            =   75
+         TabIndex        =   0
+         Top             =   0
+         Width           =   1620
+         ForeColor       =   16777215
+         BackColor       =   128
+         Caption         =   "Wholesale Bill"
+         PicturePosition =   327683
+         Size            =   "2857;952"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton CMDPRETURN 
+         Height          =   540
+         Left            =   5025
+         TabIndex        =   3
+         Top             =   0
+         Width           =   1620
+         ForeColor       =   16777215
+         BackColor       =   32768
+         Caption         =   "Purchase Return"
+         PicturePosition =   327683
+         Size            =   "2857;952"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton CMDSALERETURN 
+         Height          =   540
+         Left            =   6675
+         TabIndex        =   4
+         Top             =   0
+         Width           =   1620
+         ForeColor       =   16777215
+         BackColor       =   8421376
+         Caption         =   "Sales Return"
+         PicturePosition =   327683
+         Size            =   "2857;952"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton CMDEXIT 
+         Height          =   525
+         Left            =   13560
+         TabIndex        =   7
+         Top             =   0
+         Width           =   1800
+         ForeColor       =   16777215
+         BackColor       =   8388608
+         Caption         =   "EXIT"
+         PicturePosition =   327683
+         Size            =   "3175;926"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton cmdpurchase 
+         Height          =   540
+         Left            =   1725
+         TabIndex        =   1
+         Top             =   0
+         Width           =   1620
+         ForeColor       =   16777215
+         BackColor       =   32896
+         Caption         =   "Purchase"
+         PicturePosition =   327683
+         Size            =   "2857;952"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton STKADJUST 
+         Height          =   540
+         Left            =   3375
+         TabIndex        =   2
+         Top             =   0
+         Width           =   1620
+         ForeColor       =   16777215
+         BackColor       =   16512
+         Caption         =   "Stock Summary"
+         PicturePosition =   327683
+         Size            =   "2857;952"
+         FontName        =   "Tahoma"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+      Begin MSForms.CommandButton cmdduplicate 
+         Height          =   690
+         Left            =   18045
+         TabIndex        =   10
+         Top             =   15
+         Visible         =   0   'False
+         Width           =   855
+         Caption         =   "DUPLICATE BILL"
+         PicturePosition =   327683
+         Size            =   "1508;1217"
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+      End
+      Begin MSForms.CommandButton cmdPOrde1 
+         Height          =   675
+         Left            =   18465
+         TabIndex        =   9
+         Top             =   30
+         Visible         =   0   'False
+         Width           =   1140
+         ForeColor       =   16777215
+         BackColor       =   255
+         Caption         =   "ORDER"
+         PicturePosition =   327683
+         Size            =   "2011;1191"
+         FontEffects     =   1073741825
+         FontHeight      =   165
+         FontCharSet     =   0
+         FontPitchAndFamily=   2
+         ParagraphAlign  =   3
+         FontWeight      =   700
+      End
+   End
+   Begin VB.Menu MNUENTRY 
+      Caption         =   "ENTRIES"
+      Begin VB.Menu mnuwsale 
+         Caption         =   "Sale Bill"
+         Shortcut        =   ^B
+      End
+      Begin VB.Menu mnuretail 
+         Caption         =   "Retail Sale"
+         Shortcut        =   ^R
+         Visible         =   0   'False
+      End
+      Begin VB.Menu mnupurchase 
+         Caption         =   "Purchase"
+         Shortcut        =   ^P
+      End
+      Begin VB.Menu mnuprice 
+         Caption         =   "Price Analysis"
+         Shortcut        =   ^S
+      End
+      Begin VB.Menu mnurcpt 
+         Caption         =   "RECEIPT"
+         Visible         =   0   'False
+      End
+      Begin VB.Menu MNUSUPPLIER 
+         Caption         =   "SUPPLER MASTER"
+      End
+      Begin VB.Menu MNUCUST 
+         Caption         =   "CUSTOMER MASTER"
+      End
+      Begin VB.Menu MNUEMPLOYEE 
+         Caption         =   "EMLPOYEE MASTER"
+      End
+      Begin VB.Menu MNUEXPLDGR 
+         Caption         =   "EXPENSE MASTER"
+      End
+      Begin VB.Menu MNUAGNT 
+         Caption         =   "AGENT MASTER"
+      End
+      Begin VB.Menu MnuMinQty 
+         Caption         =   "Set Re-Order Qty"
+      End
+      Begin VB.Menu mnuFormatSep 
+         Caption         =   "-"
+      End
+      Begin VB.Menu MnuSer_Stk 
+         Caption         =   "Issue Items to Service"
+      End
+      Begin VB.Menu MnuQtn 
+         Caption         =   "QUOTATIONS"
+      End
+      Begin VB.Menu MNUPO 
+         Caption         =   "PURCHASE ORDER"
+      End
+      Begin VB.Menu mnuOP 
+         Caption         =   "OPENING STOCK ENTRY"
+      End
+      Begin VB.Menu MNUDAMAGE 
+         Caption         =   "DAMAGE GOODS ENTRY"
+      End
+      Begin VB.Menu MNUGIFT 
+         Caption         =   "SAMPLE GOODS ENTRY"
+      End
+      Begin VB.Menu MnuExpenseSt 
+         Caption         =   "Expense to Staff"
+      End
+      Begin VB.Menu MNUEXPENTRY 
+         Caption         =   "Office Expense Entry"
+      End
+      Begin VB.Menu MnuExpStaff 
+         Caption         =   "Expense Entry for Staff"
+      End
+      Begin VB.Menu PGAYR 
+         Caption         =   "PAYMENT ENTRY"
+      End
+      Begin VB.Menu MNURCPTREG 
+         Caption         =   "RECEIPT ENTRY"
+      End
+   End
+   Begin VB.Menu MNUREPORT 
+      Caption         =   "VIEW"
+      Begin VB.Menu MnuSerStkReg 
+         Caption         =   "Service Stock register"
+      End
+      Begin VB.Menu PR 
+         Caption         =   "PURCHASE REGISTER"
+      End
+      Begin VB.Menu SR 
+         Caption         =   "SALES REGISTER"
+      End
+      Begin VB.Menu mnurcptdue 
+         Caption         =   "Receipt Dues"
+      End
+      Begin VB.Menu mnupymntdue 
+         Caption         =   "Payment Dues"
+      End
+      Begin VB.Menu MnuExpReg 
+         Caption         =   "Office Expense Register"
+      End
+      Begin VB.Menu MnuExpStaffReg 
+         Caption         =   "Staff Expense Register"
+      End
+      Begin VB.Menu MNUTRNX 
+         Caption         =   "TRANSACTIONS"
+      End
+      Begin VB.Menu MNUDEL_REG 
+         Caption         =   "DELIVERY REGISTER"
+      End
+      Begin VB.Menu MNUS_RETURNREG 
+         Caption         =   "SALES RETURN REGISTER"
+      End
+      Begin VB.Menu MNUP_RETURNREG 
+         Caption         =   "PURCHASE RETURN REGISTER"
+      End
+      Begin VB.Menu MNUDAMREG 
+         Caption         =   "DAMAGED GOODS REGISTER"
+      End
+      Begin VB.Menu MNUGIFTREG 
+         Caption         =   "SAMPLE GOODS REGISTER"
+      End
+      Begin VB.Menu MNUCOMSN 
+         Caption         =   "COMMISSION REGISTER"
+      End
+      Begin VB.Menu MNUFREE 
+         Caption         =   "ISSUE OF FREE ITEMS"
+      End
+      Begin VB.Menu STKMVMNT 
+         Caption         =   "STOCK MOVEMENT"
+      End
+      Begin VB.Menu MNUSTKANALYSIS 
+         Caption         =   "STOCK ANALYSIS"
+      End
+      Begin VB.Menu mnuarea 
+         Caption         =   "Stock Movement Area Wise"
+      End
+      Begin VB.Menu MNUACCOUNTS 
+         Caption         =   "ACCOUNTS SUMMARY"
+      End
+      Begin VB.Menu MNUROUTE 
+         Caption         =   "ROUTE LAYOUT"
+      End
+   End
+   Begin VB.Menu mnutest 
+      Caption         =   "Test"
+      Visible         =   0   'False
+   End
+   Begin VB.Menu mnugud_rep 
+      Caption         =   "ITEMS UNDER WARRANTY"
+      Begin VB.Menu MNURCVGOODS 
+         Caption         =   "Receive Items from Customer"
+      End
+      Begin VB.Menu mnusentgoods 
+         Caption         =   "Sent Items to the Supplier"
+      End
+      Begin VB.Menu mnurcvdist 
+         Caption         =   "Receive Items from Distributors"
+      End
+      Begin VB.Menu mnureturn 
+         Caption         =   "Return Items to Customers"
+      End
+   End
+   Begin VB.Menu MNUTOOLS 
+      Caption         =   "TOOLS"
+      Begin VB.Menu MNUSHOPINFO 
+         Caption         =   "EDIT SHOP INFORMATION"
+      End
+      Begin VB.Menu MNUUSER 
+         Caption         =   "EDIT USER PASSWORD"
+      End
+      Begin VB.Menu MNUBACK 
+         Caption         =   "CREATE BACKUP"
+      End
+   End
+End
+Attribute VB_Name = "MDIMAIN"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+
+Private Sub CMDBILLRETAIL_Click()
+    FRMWSALE.Show
+    FRMWSALE.SetFocus
+    CmdRetailBill.Enabled = False
+End Sub
+
+Private Sub CMDBILLRETAIL_KeyPress(KeyAscii As MSForms.ReturnInteger)
+    Dim i As Integer
+    i = KeyAscii
+    If Forms.Count = 1 Then Call Keypress(i)
+End Sub
+
+Private Sub cmdduplicate_Click()
+    FRMWITHOUT.Show
+    FRMWITHOUT.SetFocus
+End Sub
+
+Private Sub CMDPRETURN_Click()
+    FRMPURRET.Show
+    FRMPURRET.SetFocus
+End Sub
+
+Private Sub CMDPRETURN_KeyPress(KeyAscii As MSForms.ReturnInteger)
+    Dim i As Integer
+    i = KeyAscii
+    If Forms.Count = 1 Then Call Keypress(i)
+End Sub
+
+Private Sub CmdRetailBill_Click()
+    FRMESTIMATE.Show
+    FRMESTIMATE.SetFocus
+    CMDBILLRETAIL.Enabled = False
+End Sub
+
+Private Sub CMDSALERETURN_Click()
+    FRMSALERETURN.Show
+    FRMSALERETURN.SetFocus
+End Sub
+
+Private Sub CMDSALERETURN_KeyPress(KeyAscii As MSForms.ReturnInteger)
+    Dim i As Integer
+    i = KeyAscii
+    If Forms.Count = 1 Then Call Keypress(i)
+End Sub
+
+
+Private Sub CmdWO_Click()
+    FRMRETAILWO.Show
+    FRMRETAILWO.SetFocus
+End Sub
+
+Private Sub CommandButton2_Click()
+    FRMDELIVERY.Show
+    FRMDELIVERY.SetFocus
+End Sub
+
+Private Sub MDIForm_Load()
+    CLOSEALL = 1
+    If frmLogin.rs!Level = "1" Then
+        MNUUSER.Visible = False
+        MNUCOMSN.Visible = False
+        MNUSHOPINFO.Visible = False
+        MNUACCOUNTS.Visible = False
+        cmdpurchase.Visible = False
+        CMDPRETURN.Visible = False
+        MNUSUPPLIER.Visible = False
+        MNUPO.Visible = False
+        mnuOP.Visible = False
+        MnuExpenseSt.Visible = False
+        MNUEXPENTRY.Visible = False
+        MnuExpStaff.Visible = False
+        PGAYR.Visible = False
+        PR.Visible = False
+        mnupymntdue.Visible = False
+        MnuExpReg.Visible = False
+        MnuExpStaffReg.Visible = False
+        MNUP_RETURNREG.Visible = False
+        MNUCOMSN.Visible = False
+        
+    ElseIf frmLogin.rs!Level = "2" Then
+        MNUUSER.Visible = False
+        MNUCOMSN.Visible = False
+        MNUSHOPINFO.Visible = False
+        MNUACCOUNTS.Visible = False
+        CMDBILLRETAIL.Visible = False
+        CMDSALERETURN.Visible = False
+        CommandButton2.Visible = False
+        MNUCUST.Visible = False
+        MnuExpenseSt.Visible = False
+        MNUEXPENTRY.Visible = False
+        MnuExpStaff.Visible = False
+        MNURCPTREG.Visible = False
+        SR.Visible = False
+        mnurcptdue.Visible = False
+        MnuExpReg.Visible = False
+        MnuExpStaffReg.Visible = False
+        MNUDEL_REG.Visible = False
+        MNUS_RETURNREG.Visible = False
+        MNUCOMSN.Visible = False
+        FRMROUTE.Visible = False
+    End If
+End Sub
+
+Private Sub MDIForm_Unload(Cancel As Integer)
+    If CLOSEALL = 0 Then
+        frmLogin.rs!LAST_LOGOUT = Format(Date, "DD/MM/YYYY") & " " & Format(Time, "hh:mm:ss")
+        frmLogin.rs.Update
+        frmLogin.rs.Close
+        Set frmLogin.rs = Nothing
+        db.Close
+        Set db = Nothing
+        End
+    End If
+    Cancel = CLOSEALL
+End Sub
+
+Private Sub MNUAGNT_Click()
+    If PCTMENU.Visible = True Then
+        frmAgentMast.Show
+        frmAgentMast.SetFocus
+    Else
+        frmAgentMastwo.Show
+        frmAgentMastwo.SetFocus
+    End If
+End Sub
+
+Private Sub mnuarea_Click()
+    If PCTMENU.Visible = True Then
+        FRMAREAWISERPT.Show
+        FRMAREAWISERPT.SetFocus
+    Else
+        FRMAREARPTWO.Show
+        FRMAREARPTWO.SetFocus
+    End If
+End Sub
+
+Private Sub MNUBACK_Click()
+    fRMbackup.Show
+    fRMbackup.SetFocus
+End Sub
+
+Private Sub MNUCOMSN_Click()
+    If PCTMENU.Visible = True Then
+        FRMAGENTREG.Show
+        FRMAGENTREG.SetFocus
+    Else
+        FRMAGENTREGWO.Show
+        FRMAGENTREGWO.SetFocus
+    End If
+End Sub
+
+Private Sub MNUCUST_Click()
+    frmcustmast.Show
+    frmcustmast.SetFocus
+End Sub
+
+Private Sub MNUDAMAGE_Click()
+    FRMDAMAGE.Show
+    FRMDAMAGE.SetFocus
+End Sub
+
+Private Sub MNUDAMREG_Click()
+    FRMDAMREG.Show
+    FRMDAMREG.SetFocus
+End Sub
+
+Private Sub MNUDEL_REG_Click()
+    FRMDELREG.Show
+    FRMDELREG.SetFocus
+End Sub
+
+Private Sub MNUEMPLOYEE_Click()
+    frmEmployeeMast.Show
+    frmEmployeeMast.SetFocus
+End Sub
+
+Private Sub MnuExpenseSt_Click()
+    frmExpenseStaff.Show
+    frmExpenseStaff.SetFocus
+End Sub
+
+Private Sub MNUEXPENTRY_Click()
+    'If PCTMENU.Visible = True Then
+        Frmexpense.Show
+        Frmexpense.SetFocus
+    'Else
+        'frmExpensewo.Show
+        'frmExpensewo.SetFocus
+    'End If
+End Sub
+
+Private Sub MNUEXPLDGR_Click()
+    frmExpmast.Show
+    frmExpmast.SetFocus
+End Sub
+
+Private Sub MnuExpReg_Click()
+    FrmExpReg.Show
+    FrmExpReg.SetFocus
+End Sub
+
+Private Sub MnuExpStaff_Click()
+    frmExpenseStaff.Show
+    frmExpenseStaff.SetFocus
+End Sub
+
+Private Sub MnuExpStaffReg_Click()
+    FrmExpStaffReg.Show
+    FrmExpStaffReg.SetFocus
+End Sub
+
+Private Sub MNUFREE_Click()
+    FRMFREE.Show
+    FRMFREE.SetFocus
+End Sub
+
+Private Sub mnugift_Click()
+    FRMGIFT.Show
+    FRMGIFT.SetFocus
+End Sub
+
+Private Sub MNUGIFTREG_Click()
+'    If PCTMENU.Visible = True Then
+'        FRMGIFTREG.Show
+'        FRMGIFTREG.SetFocus
+'    End If
+End Sub
+
+Private Sub MnuMinQty_Click()
+    FRMSETMINSTOCK.Show
+    FRMSETMINSTOCK.SetFocus
+End Sub
+
+Private Sub mnuOP_Click()
+    frmOP.Show
+    frmOP.SetFocus
+End Sub
+
+Private Sub MNUP_RETURNREG_Click()
+    FrmPretReg.Show
+    FrmPretReg.SetFocus
+End Sub
+
+Private Sub MNUPO_Click()
+    frmPO.Show
+    frmPO.SetFocus
+End Sub
+
+Private Sub mnuprice_Click()
+    FrmPriceAnalysis.Show
+    FrmPriceAnalysis.SetFocus
+End Sub
+
+Private Sub mnupurchase_Click()
+    If cmdpurchase.Enabled = True Then cmdpurchase_Click
+End Sub
+
+Private Sub mnupymntdue_Click()
+    ReportNameVar = App.Path & "\RptPymntDues.RPT"
+    Set Report = crxApplication.OpenReport(ReportNameVar, 1)
+    Report.RecordSelectionFormula = "({CRDTPYMT.TRX_TYPE} ='PY' OR {CRDTPYMT.TRX_TYPE} ='CR')"
+    Set CRXFormulaFields = Report.FormulaFields
+
+    For i = 1 To Report.Database.Tables.Count
+        Report.Database.Tables(i).SetLogOnInfo "ConnectionName", "G:\dbase\YEAR14-15\MDINV.MDB", "admin", "!@#$%^&*())(*&^%$#@!"
+    Next i
+    For Each CRXFormulaField In CRXFormulaFields
+        'If CRXFormulaField.Name = "{@NetGrandTotal}" Then CRXFormulaField.Text = "'" & Format(Round(Val(lblnetamount.Caption), 0), "0.00") & "'"
+    Next
+    frmreport.Caption = "BILL"
+    Call GENERATEREPORT
+End Sub
+
+Private Sub MnuQtn_Click()
+    'If PCTMENU.Visible = True Then
+        FRMQTN.Show
+        FRMQTN.SetFocus
+    'End If
+End Sub
+
+Private Sub mnurcptdue_Click()
+    ReportNameVar = App.Path & "\RptReceiptDues.RPT"
+    Set Report = crxApplication.OpenReport(ReportNameVar, 1)
+    Report.RecordSelectionFormula = "( {DBTPYMT.CHECK_FLAG} <>'Y' )"
+    Set CRXFormulaFields = Report.FormulaFields
+
+    For i = 1 To Report.Database.Tables.Count
+        Report.Database.Tables(i).SetLogOnInfo "ConnectionName", "G:\dbase\YEAR14-15\MDINV.MDB", "admin", "!@#$%^&*())(*&^%$#@!"
+    Next i
+    For Each CRXFormulaField In CRXFormulaFields
+        'If CRXFormulaField.Name = "{@NetGrandTotal}" Then CRXFormulaField.Text = "'" & Format(Round(Val(lblnetamount.Caption), 0), "0.00") & "'"
+    Next
+    frmreport.Caption = "BILL"
+    Call GENERATEREPORT
+End Sub
+
+Private Sub MNURCPTREG_Click()
+    FRMRcptReg.Show
+    FRMRcptReg.SetFocus
+End Sub
+
+Private Sub mnurcvdist_Click()
+    FRMEXPRCVD.Show
+    FRMEXPRCVD.SetFocus
+End Sub
+
+Private Sub MNURCVGOODS_Click()
+    FRMDef_Rcvd.Show
+    FRMDef_Rcvd.SetFocus
+End Sub
+
+Private Sub mnuretail_Click()
+    If CmdRetailBill.Enabled = True Then Call CmdRetailBill_Click
+End Sub
+
+Private Sub mnureturn_Click()
+    FRMRETURN.Show
+    FRMRETURN.SetFocus
+End Sub
+
+Private Sub MNUROUTE_Click()
+    FRMROUTE.Show
+    FRMROUTE.SetFocus
+End Sub
+
+Private Sub MNUS_RETURNREG_Click()
+    FRMSALEREG.Show
+    FRMSALEREG.SetFocus
+End Sub
+
+Private Sub mnusentgoods_Click()
+    FRMEXP.Show
+    FRMEXP.SetFocus
+End Sub
+
+Private Sub MnuSer_Stk_Click()
+    FRMServiceStk.Show
+    FRMServiceStk.SetFocus
+End Sub
+
+Private Sub MnuSerStkReg_Click()
+    FRMServReg.Show
+    FRMServReg.SetFocus
+End Sub
+
+Private Sub MNUSHOPINFO_Click()
+    FRMSHOINFO.Show
+    FRMSHOINFO.SetFocus
+End Sub
+
+Private Sub MNUSTKANALYSIS_Click()
+    If PCTMENU.Visible = True Then
+        FRMSTOCK.Show
+        FRMSTOCK.SetFocus
+    Else
+        FRMSTOCKWO.Show
+        FRMSTOCKWO.SetFocus
+    End If
+End Sub
+
+Private Sub MNUSUPPLIER_Click()
+    If PCTMENU.Visible = True Then
+        frmsuppliermast.Show
+        frmsuppliermast.SetFocus
+    Else
+        frmsuppliermastwo.Show
+        frmsuppliermastwo.SetFocus
+    End If
+End Sub
+
+Private Sub mnutest_Click()
+    Dim RSTTRXFILE As ADODB.Recordset
+    Dim RSTTRXFILE2 As ADODB.Recordset
+    Dim RSTTRXFILE3 As ADODB.Recordset
+    Dim A, C, E As Long
+    Dim b, D, F As Double
+    Set RSTTRXFILE = New ADODB.Recordset
+    RSTTRXFILE.Open "SELECT *  FROM ITEMMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+    With RSTTRXFILE
+        Do Until .EOF
+            A = 0
+            b = 0
+            C = 0
+            D = 0
+            E = 0
+            F = 0
+            Set RSTTRXFILE2 = New ADODB.Recordset
+            RSTTRXFILE2.Open "SELECT *  FROM RTRXFILE WHERE ITEM_CODE = '" & RSTTRXFILE!ITEM_CODE & "'", db, adOpenStatic, adLockReadOnly, adCmdText
+            Do Until RSTTRXFILE2.EOF
+                A = A + RSTTRXFILE2!QTY                                 'Rcpt qty
+                b = b + RSTTRXFILE2!TRX_TOTAL                           'Rcpt Value
+                C = C + RSTTRXFILE2!BAL_QTY                             'Closing Qty
+                D = D + RSTTRXFILE2!ITEM_COST * RSTTRXFILE2!BAL_QTY     'Closing Value
+                RSTTRXFILE2.MoveNext
+            Loop
+            RSTTRXFILE2.Close
+            Set RSTTRXFILE2 = Nothing
+            
+            Set RSTTRXFILE3 = New ADODB.Recordset
+            RSTTRXFILE3.Open "SELECT *  FROM TRXFILE WHERE ITEM_CODE = '" & RSTTRXFILE!ITEM_CODE & "'", db, adOpenStatic, adLockReadOnly, adCmdText
+            Do Until RSTTRXFILE3.EOF
+                E = E + RSTTRXFILE3!QTY + RSTTRXFILE3!FREE_QTY  'Issue qty
+                F = F + RSTTRXFILE3!TRX_TOTAL                   'Issue Value
+                RSTTRXFILE3.MoveNext
+            Loop
+            RSTTRXFILE3.Close
+            Set RSTTRXFILE3 = Nothing
+            
+            !RCPT_QTY = A
+            !RCPT_VAL = b
+            !CLOSE_QTY = C
+            !CLOSE_VAL = D
+            !ISSUE_QTY = E
+            !ISSUE_VAL = F
+            RSTTRXFILE.Update
+            RSTTRXFILE.MoveNext
+        Loop
+    End With
+    RSTTRXFILE.Close
+    Set RSTTRXFILE = Nothing
+End Sub
+
+Private Sub MNUTRNX_Click()
+    If PCTMENU.Visible = True Then
+        FRMTRNXREG.Show
+        FRMTRNXREG.SetFocus
+    Else
+        FRMTRNXREGWO.Show
+        FRMTRNXREGWO.SetFocus
+    End If
+End Sub
+
+Private Sub MNUUSER_Click()
+    frmUserMast.Show
+    frmUserMast.SetFocus
+End Sub
+
+Private Sub mnuwsale_Click()
+    If CMDBILLRETAIL.Enabled = True Then CMDBILLRETAIL_Click
+End Sub
+
+Private Sub PGAYR_Click()
+    FRMPaymntreg.Show
+    FRMPaymntreg.SetFocus
+End Sub
+
+Private Sub PR_Click()
+    FRMPURCAHSEREGISTER.Show
+    FRMPURCAHSEREGISTER.SetFocus
+End Sub
+
+Private Sub SR_Click()
+    FRMBILLPRINT.Show
+    FRMBILLPRINT.SetFocus
+End Sub
+
+Private Sub STKADJUST_KeyPress(KeyAscii As MSForms.ReturnInteger)
+    Dim i As Integer
+    i = KeyAscii
+    If Forms.Count = 1 Then Call Keypress(i)
+End Sub
+
+Private Sub STKMVMNT_Click()
+    FrmStkmovmnt.Show
+    FrmStkmovmnt.SetFocus
+End Sub
+
+Private Sub CMDEXIT_Click()
+    If Forms.Count = 1 Then CLOSEALL = 0
+    Unload Me
+'    db.Close
+'    DB.Close
+'    Unload Me
+End Sub
+
+Private Sub CMDEXIT_KeyPress(KeyAscii As MSForms.ReturnInteger)
+    Dim i As Integer
+    i = KeyAscii
+    If Forms.Count = 1 Then Call Keypress(i)
+End Sub
+
+Private Sub cmdpurchase_Click()
+    frmLP.Show
+    frmLP.SetFocus
+End Sub
+
+Private Sub cmdpurchase_KeyPress(KeyAscii As MSForms.ReturnInteger)
+    Dim i As Integer
+    i = KeyAscii
+    If Forms.Count = 1 Then Call Keypress(i)
+End Sub
+
+Private Sub PCTMENU_GotFocus()
+    On Error Resume Next
+    MDIMAIN.CMDBILLRETAIL.SetFocus
+End Sub
+
+Private Sub PCTMENU_KeyPress(KeyAscii As Integer)
+    Dim i As Integer
+    i = KeyAscii
+    If Forms.Count = 1 Then Call Keypress(i)
+End Sub
+
+Private Sub STKADJUST_Click()
+    FRMSTKSUMRy.Show
+    FRMSTKSUMRy.SetFocus
+End Sub
+
+Private Function Keypress(Key As Integer)
+    Select Case Key
+            Case vbKeyV, Asc("v")
+                cmdpurchase.Tag = Key
+            Case vbKeyA, Asc("a")
+                cmdpurchase.Tag = Key
+            Case vbKeyT, Asc("t")
+                If Val(cmdpurchase.Tag) = 118 Or Val(cmdpurchase.Tag) = 86 Or Val(cmdpurchase.Tag) = 65 Or Val(cmdpurchase.Tag) = 97 Then
+                    'pctmenu2.Visible = False
+                    'PCTMENU.Visible = True
+                    Me.Caption = "Ez..Biz INVENTORY - VAT BILL"
+                    'Me.Picture = App.Path & "\Geo.jpg" '
+                End If
+                cmdpurchase.Tag = ""
+                
+            Case vbKeyD, Asc("d")
+                cmdduplicate.Tag = Key
+            Case vbKeyU, Asc("u")
+                cmdduplicate.Tag = Key
+            Case vbKeyP, Asc("p")
+                If Val(cmdduplicate.Tag) = 68 Or Val(cmdduplicate.Tag) = 100 Or Val(cmdduplicate.Tag) = 85 Or Val(cmdduplicate.Tag) = 117 Then
+'                    pctmenu2.Visible = True
+'                    PCTMENU.Visible = False
+                    'Me.Caption = "Ez..Biz INVENTORY - ESTIMATE"
+                    'Me.Picture = App.Path & "\Geo.jpg" '
+                    cmdduplicate_Click
+                End If
+                cmdduplicate.Tag = ""
+            Case Else
+                cmdduplicate.Tag = ""
+                'cmdEstimate.Tag = ""
+    End Select
+
+End Function
+
+Private Sub MNUACCOUNTS_Click()
+    frmDaybook.Show
+    frmDaybook.SetFocus
+End Sub
+
+Private Sub cmdtest_Click()
+    Dim RSTTRXFILE As ADODB.Recordset
+    Dim rststock As ADODB.Recordset
+    Dim rstitem3 As ADODB.Recordset
+    Dim rstlink1 As ADODB.Recordset
+    Dim rstlink2 As ADODB.Recordset
+    Dim i As Double
+
+   
+    'Exit Sub
+    
+    Set rststock = New ADODB.Recordset
+    rststock.Open "SELECT * FROM ITEMMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+    Do Until rststock.EOF
+        rststock!ITEM_NAME = rststock!CATEGORY & " " & rststock!ITEM_NAME
+        rststock.Update
+        rststock.MoveNext
+    Loop
+    rststock.Close
+    Set rststock = Nothing
+
+    Exit Sub
+    i = 1
+    Set rststock = New ADODB.Recordset
+    rststock.Open "SELECT * FROM ITEMMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+    Do Until rststock.EOF
+        Set RSTRTRXFILE = New ADODB.Recordset
+        RSTRTRXFILE.Open "SELECT * FROM RTRXFILE WHERE ITEM_CODE = '" & rststock!ITEM_CODE & "' ORDER BY VCH_DATE DESC", db, adOpenStatic, adLockReadOnly
+        If Not (RSTRTRXFILE.EOF And RSTRTRXFILE.BOF) Then
+        'Do Until RSTRTRXFILE.EOF
+            rststock!UNIT = RSTRTRXFILE!LINE_DISC
+            rststock!ITEM_COST = RSTRTRXFILE!ITEM_COST
+            rststock!P_RETAIL = RSTRTRXFILE!P_RETAIL
+            rststock!P_WS = RSTRTRXFILE!P_WS
+            rststock!P_CRTN = RSTRTRXFILE!P_CRTN
+            rststock!P_RETAIL = RSTRTRXFILE!P_VAN
+            rststock!MRP = RSTRTRXFILE!MRP
+            'rststock!MRP_BT = IIf(IsNull(RSTRTRXFILE!MRP_BT), 0, RSTRTRXFILE!MRP_BT)
+            rststock!SALES_TAX = RSTRTRXFILE!SALES_TAX
+            rststock!PTR = RSTRTRXFILE!PTR
+            rststock!COM_PER = RSTRTRXFILE!COM_PER
+            rststock!COM_AMT = RSTRTRXFILE!COM_PER
+            rststock!COM_FLAG = RSTRTRXFILE!COM_FLAG
+            rststock!CRTN_PACK = RSTRTRXFILE!CRTN_PACK
+            rststock.Update
+            'RSTRTRXFILE.MoveNext
+        'Loop
+        End If
+        'i = i + 1
+        rststock.MoveNext
+    Loop
+    RSTRTRXFILE.Close
+    Set RSTRTRXFILE = Nothing
+    
+    rststock.Close
+    Set rststock = Nothing
+    
+    Exit Sub
+    i = 1
+    Set rststock = New ADODB.Recordset
+    rststock.Open "SELECT * FROM ITEMMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+    Do Until rststock.EOF
+        Set RSTRTRXFILE = New ADODB.Recordset
+        RSTRTRXFILE.Open "SELECT * FROM RTRXFILE WHERE ITEM_CODE = '" & rststock!ITEM_CODE & "' AND TRX_TYPE='PI' ORDER BY VCH_DATE DESC", db, adOpenStatic, adLockReadOnly
+        If Not (RSTRTRXFILE.EOF And RSTRTRXFILE.BOF) Then
+        'Do Until RSTRTRXFILE.EOF
+            rststock!UNIT = RSTRTRXFILE!LINE_DISC
+            rststock!ITEM_COST = RSTRTRXFILE!ITEM_COST
+            rststock!MRP = RSTRTRXFILE!MRP
+            rststock!MRP_BT = IIf(IsNull(RSTRTRXFILE!MRP_BT), 0, RSTRTRXFILE!MRP_BT)
+            rststock!SALES_TAX = RSTRTRXFILE!SALES_TAX
+            rststock!PTR = RSTRTRXFILE!PTR
+            
+            
+            
+            rststock.Update
+            'RSTRTRXFILE.MoveNext
+        'Loop
+        End If
+        'i = i + 1
+        rststock.MoveNext
+    Loop
+    RSTRTRXFILE.Close
+    Set RSTRTRXFILE = Nothing
+    
+    rststock.Close
+    Set rststock = Nothing
+    
+    Exit Sub
+    Set rststock = New ADODB.Recordset
+    rststock.Open "SELECT * From RTRXFILE ORDER BY ITEM_CODE", db, adOpenStatic, adLockReadOnly
+    Do Until rststock.EOF
+        Set RSTRTRXFILE = New ADODB.Recordset
+        RSTRTRXFILE.Open "SELECT *  FROM ITEMMAST WHERE ITEM_CODE = '" & rststock!ITEM_CODE & "'", db, adOpenStatic, adLockOptimistic, adCmdText
+        With RSTRTRXFILE
+            If Not (.EOF And .BOF) Then
+                !P_RETAIL = rststock!P_RETAIL
+                !P_VAN = rststock!P_VAN
+                !P_CRTN = rststock!P_CRTN
+                !P_WS = rststock!P_WS
+                RSTRTRXFILE.Update
+            End If
+        End With
+        RSTRTRXFILE.Close
+        Set RSTRTRXFILE = Nothing
+        
+        rststock.MoveNext
+    Loop
+    rststock.Close
+    Set rststock = Nothing
+    
+    Exit Sub
+    db.Execute "DELETE * FROM ATRXFILE"
+    db.Execute "DELETE * FROM ATRXSUB"
+    db.Execute "DELETE * FROM BANKCODE"
+    db.Execute "DELETE * FROM BANKLETTERS"
+    db.Execute "DELETE * FROM BONUSMAST"
+    db.Execute "DELETE * FROM CANCINV"
+    db.Execute "DELETE * FROM CHQMAST"
+    db.Execute "DELETE * FROM DAMAGED"
+    db.Execute "DELETE * FROM FQTYLIST"
+    db.Execute "DELETE * FROM ORDISSUE"
+    db.Execute "DELETE * FROM ORDMAST"
+    db.Execute "DELETE * FROM ORDSUB"
+    db.Execute "DELETE * FROM PASSWORDS"
+    db.Execute "DELETE * FROM POMAST"
+    db.Execute "DELETE * FROM POSUB"
+    db.Execute "DELETE * FROM PRICETABLE"
+    db.Execute "DELETE * FROM QTNMAST"
+    db.Execute "DELETE * FROM QTNSUB"
+    db.Execute "DELETE * FROM REORDER"
+    db.Execute "DELETE * FROM RTRXFILE"
+    db.Execute "DELETE * FROM ITEMMAST"
+    Set RSTTRXFILE = New ADODB.Recordset
+    RSTTRXFILE.Open "Select * From ITEMMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+    Do Until RSTTRXFILE.EOF
+        RSTTRXFILE!BIN_LOCATION = Mid(RSTTRXFILE!ITEM_NAME, 1, 1)
+        RSTTRXFILE!SALES_TAX = 0
+        RSTTRXFILE!CST = 0
+        RSTTRXFILE!OPEN_QTY = 0
+        RSTTRXFILE!OPEN_VAL = 0
+        RSTTRXFILE!RCPT_QTY = 0
+        RSTTRXFILE!RCPT_VAL = 0
+        RSTTRXFILE!ISSUE_QTY = 0
+        RSTTRXFILE!ISSUE_VAL = 0
+        RSTTRXFILE!CLOSE_QTY = 0
+        RSTTRXFILE!CLOSE_VAL = 0
+        RSTTRXFILE!DAM_QTY = 0
+        RSTTRXFILE!DAM_VAL = 0
+        RSTTRXFILE!DISC = 0
+        RSTTRXFILE.Update
+        RSTTRXFILE.MoveNext
+    Loop
+    RSTTRXFILE.Close
+    Set RSTTRXFILE = Nothing
+    
+    'db.Execute "DELETE * FROM RTRXFILE WHERE [VCH_DATE] <# " & Format(DTFROM.Value, "MM,DD,YYYY") & " # AND BAL_QTY <=0"
+    db.Execute "DELETE * FROM REPLCN"
+    db.Execute "DELETE * FROM TEMPCN"
+    db.Execute "DELETE * FROM TRANSMAST"
+    db.Execute "DELETE * FROM TRANSSUB"
+    db.Execute "DELETE * FROM TRXEXPENSE"
+    db.Execute "DELETE * FROM TRXFILE"
+    db.Execute "DELETE * FROM TRXMAST"
+    db.Execute "DELETE * FROM TRXSUB"
+    db.Execute "DELETE * FROM VANSTOCK"
+    
+    db.Execute "DELETE * FROM ATRXFILE"
+    db.Execute "DELETE * FROM CRDTPYMT"
+    db.Execute "DELETE * FROM RTRXFILE"
+    db.Execute "DELETE * FROM SALERETURN"
+    db.Execute "DELETE * FROM TRANSMASTWO"
+    db.Execute "DELETE * FROM TRXEXPENSE"
+    db.Execute "DELETE * FROM TRXFILE"
+    db.Execute "DELETE * FROM TRXMAST"
+    db.Execute "DELETE * FROM TRXSUB"
+    db.Execute "DELETE * FROM TRXWOBILL"
+    
+    
+    
+    
+    
+    db.Execute "DELETE * FROM BAKEXPIRY"
+    db.Execute "DELETE * FROM BILLDETAILS"
+    db.Execute "DELETE * FROM CRDTPYMT"
+    db.Execute "DELETE * FROM CRDTPYMT1"
+    db.Execute "DELETE * FROM DBTPYMT"
+    db.Execute "DELETE * FROM Delivery"
+    db.Execute "DELETE * FROM DUMMYBILL"
+    db.Execute "DELETE * FROM EXPIRY"
+    db.Execute "DELETE * FROM EXPLIST"
+    db.Execute "DELETE * FROM EXPSORT"
+    db.Execute "DELETE * FROM MinStock"
+    db.Execute "DELETE * FROM NONRCVD"
+    db.Execute "DELETE * FROM P_Rate"
+    db.Execute "DELETE * FROM PURCAHSERETURN"
+    db.Execute "DELETE * FROM RTRXFILE"
+    db.Execute "DELETE * FROM SALEBILL"
+    db.Execute "DELETE * FROM SALERETURN"
+    db.Execute "DELETE * FROM SALESLEDGER"
+    db.Execute "DELETE * FROM SALESREG"
+    db.Execute "DELETE * FROM SALESREG2"
+    db.Execute "DELETE * FROM SelDist"
+    db.Execute "DELETE * FROM SLIP_REG"
+    db.Execute "DELETE * FROM Stock"
+    db.Execute "DELETE * FROM STOCKLESS"
+    db.Execute "DELETE * FROM TEMPCN"
+    db.Execute "DELETE * FROM TEMPTRX"
+    db.Execute "DELETE * FROM TRNXRCPT"
+    db.Execute "DELETE * FROM TmpOrderlist"
+    db.Execute "DELETE * FROM TRXFILE"
+    db.Execute "DELETE * FROM TRXMAST"
+    db.Execute "DELETE * FROM TRXWOBILL"
+    
+    
+    
+    
+'''    Set RSTTRXFILE = New ADODB.Recordset
+'''    RSTTRXFILE.Open "Select * From TRXMAST order by VCH_NO", DB, adOpenStatic, adLockOptimistic, adCmdText
+'''    Do Until RSTTRXFILE.EOF
+'''        Set rstitem2 = New ADODB.Recordset
+'''        rstitem2.Open "Select * From TRXMAST WHERE VCH_NO = " & RSTTRXFILE!T_VCH_NO & "", db, adOpenStatic, adLockReadOnly
+'''        Do Until rstitem2.EOF
+'''            RSTTRXFILE!VCH_DATE = RSTTRXFILE!VCH_DATE
+'''            RSTTRXFILE.Update
+'''            rstitem2.MoveNext
+'''        Loop
+'''        RSTTRXFILE.MoveNext
+'''    Loop
+'''    RSTTRXFILE.Close
+'''    Set RSTTRXFILE = Nothing
+    
+
+''
+''
+'''    DTFROM.Value = "01/01/2012"
+'''    db.Execute "DELETE * FROM RTRXFILE WHERE [VCH_DATE] <# " & Format(DTFROM.Value, "MM,DD,YYYY") & " # AND BAL_QTY <=0"
+'''
+'''    Set RSTTRXFILE = New ADODB.Recordset
+'''    RSTTRXFILE.Open "Select VCH_AMOUNT, VCH_NO, DISCOUNT From TRANSMAST WHERE TRX_TYPE='PI' ORDER BY VCH_NO", db, adOpenStatic, adLockOptimistic, adCmdText
+'''    Do Until RSTTRXFILE.EOF
+'''        i = 0
+'''        Set rstitem3 = New ADODB.Recordset
+'''        rstitem3.Open "Select * From RTRXFILE WHERE TRX_TYPE='PI' AND VCH_NO = " & RSTTRXFILE!VCH_NO & "", db, adOpenForwardOnly
+'''        Do Until rstitem3.EOF
+'''            i = i + rstitem3!TRX_TOTAL
+'''            rstitem3.MoveNext
+'''        Loop
+'''        rstitem3.Close
+'''        Set rstitem3 = Nothing
+'''
+'''        RSTTRXFILE!VCH_AMOUNT = Round(i - RSTTRXFILE!DISCOUNT)
+'''        RSTTRXFILE.Update
+'''        RSTTRXFILE.MoveNext
+'''    Loop
+'''    RSTTRXFILE.Close
+'''    Set RSTTRXFILE = Nothing
+''
+''
+''
+'''    On Error GoTo errHand
+'''    Screen.MousePointer = vbHourglass
+'''    Set rstitem1 = New ADODB.Recordset
+'''    rstitem1.Open "SELECT DISTINCT [ITEM_CODE] from [RTRXFILE]", db, adOpenForwardOnly
+'''    Do Until rstitem1.EOF
+'''        Set rstitem2 = New ADODB.Recordset
+'''        rstitem2.Open "SELECT * from [ITEMMAST] WHERE ITEM_CODE = '" & rstitem1!ITEM_CODE & "'", db, adOpenForwardOnly
+'''        If Not (rstitem2.EOF And rstitem2.BOF) Then
+'''            Set rstitem3 = New ADODB.Recordset
+'''            rstitem3.Open "SELECT * from [ITEMMAST]", DB, adOpenStatic, adLockOptimistic, adCmdText
+'''            rstitem3.AddNew
+'''            rstitem3!ITEM_CODE = rstitem2!ITEM_CODE
+'''            rstitem3!ITEM_NAME = rstitem2!ITEM_NAME
+'''            rstitem3!UNIT = rstitem2!UNIT
+'''            rstitem3!CATEGORY = rstitem2!CATEGORY
+'''            rstitem3!ITEM_COST = rstitem2!ITEM_COST
+'''            rstitem3!MRP = rstitem2!MRP
+'''            rstitem3!SALES_TAX = rstitem2!SALES_TAX
+'''            rstitem3!PTR = rstitem2!PTR
+'''            rstitem3!BIN_LOCATION = rstitem2!BIN_LOCATION
+'''            rstitem3!CST = rstitem2!CST
+'''            rstitem3!OPEN_QTY = rstitem2!OPEN_QTY
+'''            rstitem3!OPEN_VAL = rstitem2!OPEN_VAL
+'''            rstitem3!RCPT_QTY = rstitem2!RCPT_QTY
+'''            rstitem3!RCPT_VAL = rstitem2!RCPT_VAL
+'''            rstitem3!ISSUE_QTY = rstitem2!ISSUE_QTY
+'''            rstitem3!ISSUE_VAL = rstitem2!ISSUE_VAL
+'''            rstitem3!CLOSE_QTY = rstitem2!CLOSE_QTY
+'''            rstitem3!CLOSE_VAL = rstitem2!CLOSE_VAL
+'''            rstitem3!DAM_QTY = rstitem2!DAM_QTY
+'''            rstitem3!DAM_VAL = rstitem2!DAM_VAL
+'''            rstitem3!SCHEDULE = rstitem2!SCHEDULE
+'''            rstitem3!DISC = rstitem2!DISC
+'''            rstitem3!REORDER_QTY = rstitem2!REORDER_QTY
+'''            rstitem3!MANUFACTURER = rstitem2!MANUFACTURER
+'''            rstitem3!SUPPLIER = rstitem2!SUPPLIER
+'''            rstitem3!Remarks = rstitem2!Remarks
+'''            rstitem3!CREATE_DATE = rstitem2!CREATE_DATE
+'''            rstitem3!C_USER_ID = rstitem2!C_USER_ID
+'''            rstitem3!MODIFY_DATE = rstitem2!MODIFY_DATE
+'''            rstitem3!M_USER_ID = rstitem2!M_USER_ID
+'''
+'''            rstitem3.Update
+'''            rstitem3.Close
+'''            Set rstitem3 = Nothing
+'''
+'''            Set rstlink1 = New ADODB.Recordset
+'''            rstlink1.Open "SELECT * from [PRODLINK] WHERE ITEM_CODE = '" & rstitem1!ITEM_CODE & "'", db, adOpenForwardOnly
+'''            Set rstlink2 = New ADODB.Recordset
+'''            rstlink2.Open "SELECT * from [PRODLINK]", DB, adOpenStatic, adLockOptimistic, adCmdText
+'''            Do Until rstlink1.EOF
+'''                rstlink2.AddNew
+'''                rstlink2!ITEM_CODE = rstlink1!ITEM_CODE
+'''                rstlink2!ITEM_NAME = rstlink1!ITEM_NAME
+'''                rstlink2!RQTY = rstlink1!RQTY
+'''                rstlink2!ITEM_COST = rstlink1!ITEM_COST
+'''                rstlink2!MRP = rstlink1!MRP
+'''                rstlink2!PTR = rstlink1!PTR
+'''                rstlink2!SALES_PRICE = rstlink1!SALES_PRICE
+'''                rstlink2!SALES_TAX = rstlink1!SALES_TAX
+'''                rstlink2!UNIT = rstlink1!UNIT
+'''                rstlink2!Remarks = rstlink1!Remarks
+'''                rstlink2!ORD_QTY = rstlink1!ORD_QTY
+'''                rstlink2!CST = rstlink1!CST
+'''                rstlink2!ACT_CODE = rstlink1!ACT_CODE
+'''                rstlink2!CREATE_DATE = rstlink1!CREATE_DATE
+'''                rstlink2!C_USER_ID = rstlink1!C_USER_ID
+'''                rstlink2!MODIFY_DATE = rstlink1!MODIFY_DATE
+'''                rstlink2!M_USER_ID = rstlink1!M_USER_ID
+'''                rstlink2!CHECK_FLAG = rstlink1!CHECK_FLAG
+'''                rstlink2!SITEM_CODE = rstlink1!SITEM_CODE
+'''
+'''                rstlink2.Update
+'''                rstlink1.MoveNext
+'''            Loop
+'''
+'''            rstlink2.Close
+'''            Set rstlink2 = Nothing
+'''            rstlink1.Close
+'''            Set rstlink1 = Nothing
+'''        End If
+'''        rstitem2.Close
+'''        Set rstitem2 = Nothing
+'''
+'''        rstitem1.MoveNext
+'''    Loop
+'''    rstitem1.Close
+'''    Set rstitem1 = Nothing
+'''    Screen.MousePointer = vbNormal
+'''    Exit Sub
+'''errHand:
+'''    Screen.MousePointer = vbNormal
+'''    MsgBox Err.Description
+'''End Sub
+'''
+'''''''Private Sub Command1_Click()
+'''''''    Dim RSTFILE As ADODB.Recordset
+'''''''    Dim RSTFILE2 As ADODB.Recordset
+'''''''    Dim RSTFILE3 As ADODB.Recordset
+'''''''    Dim i As Long
+'''''''    Dim n As Long
+'''''''
+'''''''''' '''   //////SUPPLIER LEDGER//////
+''''''''''    Set RSTFILE = New ADODB.Recordset
+''''''''''    RSTFILE.Open "Select * From Phm003 ", Conn2, adOpenForwardOnly
+''''''''''    Do Until RSTFILE.EOF
+''''''''''        Set RSTFILE2 = New ADODB.Recordset
+''''''''''        RSTFILE2.Open "Select * From CUSTMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+''''''''''        RSTFILE2.AddNew
+''''''''''        RSTFILE2!ACT_CODE = "311" & RSTFILE!SUPCD
+''''''''''        RSTFILE2!ACT_NAME = RSTFILE!SUPNM
+''''''''''        RSTFILE2!ADDRESS = RSTFILE!SADD1 & ", " & RSTFILE!SADD2
+''''''''''        RSTFILE2!TELNO = Mid(RSTFILE!PHONE, 1, 10)
+''''''''''        RSTFILE2!KGST = RSTFILE!KGSTNO
+''''''''''        RSTFILE2!CST = ""
+''''''''''        RSTFILE2!DL_NO = ""
+''''''''''        RSTFILE2!OPEN_DB = 0
+''''''''''        RSTFILE2!OPEN_CR = 0
+''''''''''        RSTFILE2!YTD_DB = 0
+''''''''''        RSTFILE2!YTD_CR = 0
+''''''''''        RSTFILE2!CUST_TYPE = ""
+''''''''''        RSTFILE2!C_USER_ID = "SM"
+''''''''''
+''''''''''        RSTFILE2.Update
+''''''''''        RSTFILE2.Close
+''''''''''        Set RSTFILE2 = Nothing
+''''''''''        RSTFILE.MoveNext
+''''''''''    Loop
+''''''''''    RSTFILE.Close
+''''''''''    Set RSTFILE = Nothing
+''''''''''
+''''''''''  '  ///////////ITEMMASTER/////////
+''''''''''    Set RSTFILE = New ADODB.Recordset
+''''''''''    RSTFILE.Open "Select * From Phm001", Conn2, adOpenForwardOnly
+''''''''''    Do Until RSTFILE.EOF
+''''''''''        Set RSTFILE2 = New ADODB.Recordset
+''''''''''        RSTFILE2.Open "Select * From ITEMMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+''''''''''        RSTFILE2.AddNew
+''''''''''        RSTFILE2!ITEM_CODE = RSTFILE!ITCD
+''''''''''        RSTFILE2!ITEM_NAME = RSTFILE!ITNM
+''''''''''        RSTFILE2!UNIT = RSTFILE!PACKQTY
+''''''''''        RSTFILE2!CATEGORY = "MEDICINE"
+''''''''''        RSTFILE2!ITEM_COST = RSTFILE!PACKRATE
+''''''''''        RSTFILE2!MRP = RSTFILE!PACKMRP / RSTFILE!PACKQTY
+''''''''''        RSTFILE2!SALES_TAX = RSTFILE!TAXCD
+''''''''''        RSTFILE2!PTR = RSTFILE!PACKRATE
+''''''''''        RSTFILE2!BIN_LOCATION = Mid(RSTFILE!ITNM, 1, 1)
+''''''''''        RSTFILE2!CST = RSTFILE!CST
+''''''''''        RSTFILE2!OPEN_QTY = 0
+''''''''''        RSTFILE2!OPEN_VAL = 0
+''''''''''        RSTFILE2!RCPT_QTY = 0
+''''''''''        RSTFILE2!RCPT_VAL = 0
+''''''''''        RSTFILE2!ISSUE_QTY = 0
+''''''''''        RSTFILE2!ISSUE_VAL = 0
+''''''''''        RSTFILE2!CLOSE_QTY = RSTFILE!BALQTY
+''''''''''        RSTFILE2!CLOSE_VAL = 0
+''''''''''        RSTFILE2!DAM_QTY = 0
+''''''''''        RSTFILE2!DAM_VAL = 0
+''''''''''        RSTFILE2!SCHEDULE = "H"
+''''''''''        RSTFILE2!DISC = 0
+''''''''''        RSTFILE2!REORDER_QTY = RSTFILE!PACKQTY
+''''''''''        Set RSTFILE3 = New ADODB.Recordset
+''''''''''        RSTFILE3.Open "SELECT * from [Phm006] WHERE COCODE = '" & RSTFILE!COCODE & "'", Conn2, adOpenForwardOnly
+''''''''''        If Not (RSTFILE3.EOF And RSTFILE3.BOF) Then
+''''''''''            RSTFILE2!MANUFACTURER = Mid(RSTFILE3!CONAME, 1, 20)
+''''''''''        End If
+''''''''''        RSTFILE3.Close
+''''''''''        Set RSTFILE3 = Nothing
+''''''''''        RSTFILE2!SUPPLIER = ""
+''''''''        RSTFILE2!Remarks = RSTFILE!PACKRATE
+''''''''        RSTFILE2!CREATE_DATE = Format(Date, "DD/MM/YYYY")
+''''''''        RSTFILE2!C_USER_ID = ""
+''''''''        RSTFILE2!MODIFY_DATE = Format(Date, "DD/MM/YYYY")
+''''''''        RSTFILE2!M_USER_ID = ""
+''''''''
+''''''''        RSTFILE2.Update
+''''''''        RSTFILE2.Close
+''''''''        Set RSTFILE2 = Nothing
+''''''''        RSTFILE.MoveNext
+''''''''    Loop
+''''''''    RSTFILE.Close
+''''''''    Set RSTFILE = Nothing
+'''''
+''''''/////////RTRXFILE///////ITEMS WITH BATCH
+'''''    i = 0
+'''''    Set RSTFILE = New ADODB.Recordset
+'''''    RSTFILE.Open "Select * From Phm002 WHERE QTY <>0", Conn2, adOpenForwardOnly
+'''''    Do Until RSTFILE.EOF
+'''''        Set RSTFILE2 = New ADODB.Recordset
+'''''        RSTFILE2.Open "Select * From RTRXFILE", db, adOpenStatic, adLockOptimistic, adCmdText
+'''''        RSTFILE2.AddNew
+'''''        i = i + 1
+'''''        RSTFILE2!TRX_TYPE = "PI"
+'''''        RSTFILE2!VCH_NO = i
+'''''        Set RSTFILE3 = New ADODB.Recordset
+'''''        RSTFILE3.Open "SELECT * from [Pht001] WHERE INVNO = '" & RSTFILE!INVNO & "'", Conn2, adOpenForwardOnly
+'''''        If Not (RSTFILE3.EOF And RSTFILE3.BOF) Then
+'''''            RSTFILE2!VCH_DATE = Format(RSTFILE3!INVDT, "DD/MM/YYYY")
+'''''        Else
+'''''            RSTFILE2!VCH_DATE = Format("01/01/2001")
+'''''        End If
+'''''        RSTFILE3.Close
+'''''        Set RSTFILE3 = Nothing
+'''''
+'''''        RSTFILE2!LINE_NO = 1
+'''''        RSTFILE2!CATEGORY = "MEDICINE"
+'''''        RSTFILE2!ITEM_CODE = RSTFILE!ITCD
+'''''        RSTFILE2!QTY = RSTFILE!QTY
+'''''        RSTFILE2!ITEM_COST = RSTFILE!CPRICE
+'''''        RSTFILE2!PTR = RSTFILE!CPRICE
+'''''        RSTFILE2!SALES_PRICE = RSTFILE!Rate
+'''''        RSTFILE2!SALES_TAX = RSTFILE!TAX
+'''''        Set RSTFILE3 = New ADODB.Recordset
+'''''        RSTFILE3.Open "SELECT * from [Phm001] WHERE ITCD = '" & RSTFILE!ITCD & "'", Conn2, adOpenForwardOnly
+'''''        If Not (RSTFILE3.EOF And RSTFILE3.BOF) Then
+'''''            RSTFILE2!UNIT = RSTFILE3!PACKQTY
+'''''            RSTFILE2!MRP = RSTFILE!Rate * RSTFILE3!PACKQTY
+'''''            RSTFILE2!ITEM_NAME = RSTFILE3!ITNM
+'''''        End If
+'''''        RSTFILE3.Close
+'''''        Set RSTFILE3 = Nothing
+'''''
+'''''        Command1.Tag = "311" & RSTFILE!SUPCD
+'''''        Set RSTFILE3 = New ADODB.Recordset
+'''''        RSTFILE3.Open "SELECT * from [CUSTMAST] WHERE ACT_CODE = '" & Command1.Tag & "'", db, adOpenForwardOnly
+'''''        If Not (RSTFILE3.EOF And RSTFILE3.BOF) Then
+'''''            RSTFILE2!VCH_DESC = "Received From " & RSTFILE3!ACT_NAME
+'''''        End If
+'''''        RSTFILE3.Close
+'''''        Set RSTFILE3 = Nothing
+'''''
+'''''        RSTFILE2!REF_NO = RSTFILE!BTNO
+'''''        RSTFILE2!ISSUE_QTY = 0
+'''''        RSTFILE2!CST = 0
+'''''        RSTFILE2!BAL_QTY = RSTFILE!QTY
+'''''        RSTFILE2!TRX_TOTAL = 0
+'''''        RSTFILE2!LINE_DISC = Null
+'''''        RSTFILE2!SCHEME = Null
+'''''        RSTFILE2!EXP_DATE = RSTFILE!EXPDT
+'''''        RSTFILE2!FREE_QTY = 0
+'''''        RSTFILE2!CREATE_DATE = Format(Date, "DD/MM/YYYY")
+'''''        RSTFILE2!C_USER_ID = ""
+'''''        RSTFILE2!MODIFY_DATE = Format(Date, "DD/MM/YYYY")
+'''''        RSTFILE2!M_USER_ID = "311" & RSTFILE!SUPCD
+'''''        RSTFILE2!CHECK_FLAG = ""
+'''''        RSTFILE2!PINV = RSTFILE!INVNO
+'''''
+'''''        RSTFILE2.Update
+'''''        RSTFILE2.Close
+'''''        Set RSTFILE2 = Nothing
+'''''        RSTFILE.MoveNext
+'''''    Loop
+'''''    RSTFILE.Close
+'''''    Set RSTFILE = Nothing
+'''''
+'''''''''''/////////RTRXFILE///////STOCK CORRECTION
+'''''''    Set RSTITEMMAST = New ADODB.Recordset
+'''''''    RSTITEMMAST.Open "SELECT *  FROM ITEMMAST", db, adOpenStatic, adLockOptimistic, adCmdText
+'''''''    Do Until RSTITEMMAST.EOF
+'''''''        i = 0
+'''''''        n = 0
+'''''''        Set rststock = New ADODB.Recordset
+'''''''        rststock.Open "SELECT [BAL_QTY], [MRP] from [RTRXFILE] WHERE RTRXFILE.ITEM_CODE = '" & RSTITEMMAST!ITEM_CODE & "'  AND RTRXFILE.BAL_QTY > 0 ORDER BY VCH_NO", db, adOpenForwardOnly
+'''''''        Do Until rststock.EOF
+'''''''            i = i + rststock!BAL_QTY
+'''''''            n = rststock!MRP
+'''''''            rststock.MoveNext
+'''''''        Loop
+'''''''        rststock.Close
+'''''''        Set rststock = Nothing
+'''''''        RSTITEMMAST!MRP = n
+'''''''        RSTITEMMAST!OPEN_QTY = i
+'''''''        RSTITEMMAST!OPEN_VAL = 0
+'''''''        RSTITEMMAST!RCPT_QTY = 0
+'''''''        RSTITEMMAST!RCPT_VAL = 0
+'''''''        RSTITEMMAST!ISSUE_QTY = 0
+'''''''        RSTITEMMAST!ISSUE_VAL = 0
+'''''''        RSTITEMMAST!CLOSE_QTY = i
+'''''''        RSTITEMMAST!CLOSE_VAL = 0
+'''''''        RSTITEMMAST!DAM_QTY = 0
+'''''''        RSTITEMMAST!DAM_VAL = 0
+'''''''        RSTITEMMAST.Update
+'''''''        RSTITEMMAST.MoveNext
+'''''''    Loop
+'''''''    RSTITEMMAST.Close
+'''''''    Set RSTITEMMAST = Nothing
+'''''
+'''''     ''''''   /////////PRODUCT LINK///////////
+''''''    Set RSTFILE = New ADODB.Recordset
+''''''    RSTFILE.Open "Select * From Phm001", Conn2, adOpenForwardOnly
+''''''    Do Until RSTFILE.EOF
+''''''        Set RSTFILE3 = New ADODB.Recordset
+''''''        RSTFILE3.Open "SELECT * from [Phm011] WHERE COCODE = '" & RSTFILE!COCODE & "'", Conn2, adOpenForwardOnly
+''''''        Do Until RSTFILE3.EOF
+''''''            Set RSTFILE2 = New ADODB.Recordset
+''''''            RSTFILE2.Open "Select * From PRODLINK", db, adOpenStatic, adLockOptimistic, adCmdText
+''''''            RSTFILE2.AddNew
+''''''            RSTFILE2!ACT_CODE = "311" & RSTFILE3!SUPCD
+''''''
+''''''            RSTFILE2!ITEM_CODE = RSTFILE!ITCD
+''''''            RSTFILE2!ITEM_NAME = RSTFILE!ITNM
+''''''            RSTFILE2!RQTY = 0
+''''''            RSTFILE2!ITEM_COST = RSTFILE!PACKRATE
+''''''            RSTFILE2!MRP = RSTFILE!PACKMRP
+''''''            RSTFILE2!SALES_TAX = RSTFILE!TAXCD
+''''''            RSTFILE2!PTR = RSTFILE!PACKRATE
+''''''            RSTFILE2!SALES_PRICE = RSTFILE!PACKMRP
+''''''            RSTFILE2!UNIT = RSTFILE!PACKQTY
+''''''            RSTFILE2!Remarks = RSTFILE!PACKQTY
+''''''            RSTFILE2!ORD_QTY = 0
+''''''            RSTFILE2!CST = 0
+''''''            RSTFILE2!CREATE_DATE = Format(Date, "DD/MM/YYYY")
+''''''            RSTFILE2!C_USER_ID = ""
+''''''            RSTFILE2!MODIFY_DATE = Format(Date, "DD/MM/YYYY")
+''''''            RSTFILE2!M_USER_ID = ""
+''''''            RSTFILE2!CHECK_FLAG = "Y"
+''''''            RSTFILE2!SITEM_CODE = ""
+''''''
+''''''            RSTFILE2.Update
+''''''            RSTFILE2.Close
+''''''            Set RSTFILE2 = Nothing
+''''''            RSTFILE3.MoveNext
+''''''        Loop
+''''''        RSTFILE3.Close
+''''''        Set RSTFILE3 = Nothing
+''''''
+''''''        RSTFILE.MoveNext
+''''''    Loop
+''''''    RSTFILE.Close
+''''''    Set RSTFILE = Nothing
+'''''
+'''''''''''/////////RTRXFILE///////Payment Details
+'''''    i = 0
+'''''    Set RSTFILE = New ADODB.Recordset
+'''''    RSTFILE.Open "Select * From Pht001", Conn2, adOpenForwardOnly
+'''''    Do Until RSTFILE.EOF
+'''''        Set RSTFILE2 = New ADODB.Recordset
+'''''        RSTFILE2.Open "Select * From CRDTPYMT", DB, adOpenStatic, adLockOptimistic, adCmdText
+'''''        RSTFILE2.AddNew
+'''''        i = i + 1
+'''''        RSTFILE2!TRX_TYPE = "CR"
+'''''        RSTFILE2!CR_NO = i
+'''''        RSTFILE2!INV_NO = i
+'''''        RSTFILE2!INV_DATE = Format(RSTFILE!INVDT, "DD/MM/YYYY")
+'''''        RSTFILE2!INV_AMT = RSTFILE!INVAMT
+'''''        RSTFILE2!RCPT_AMT = 0
+'''''        RSTFILE2!BAL_AMT = RSTFILE!INVAMT
+'''''        RSTFILE2!ACT_CODE = "311" & RSTFILE!SUPCD
+'''''        RSTFILE2!CHECK_FLAG = "N"
+'''''        RSTFILE2!PINV = RSTFILE!INVNO
+'''''
+'''''        RSTFILE2.Update
+'''''        RSTFILE2.Close
+'''''        Set RSTFILE2 = Nothing
+'''''        RSTFILE.MoveNext
+'''''    Loop
+'''''    RSTFILE.Close
+'''''    Set RSTFILE = Nothing
+'''''
+'''''
+End Sub

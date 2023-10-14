@@ -1,0 +1,15 @@
+MDLMEDICINE = 50, 50, 879, 501, 
+bar39 = 0, 0, 0, 0, C
+modMySQL = 0, 0, 0, 0, C
+clsMD5 = 0, 0, 0, 0, C
+FrmKey = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmLogin = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmreport = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+MDIMAIN = 50, 50, 879, 501, , 75, 75, 904, 526, C
+frmcustmast1 = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmDaybook = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FRMCRDTNOTE = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+FRMDELIVERY = 75, 75, 735, 510, , 0, 0, 0, 0, C
+frmLPS = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmLWS = 0, 0, 0, 0, C, 0, 0, 0, 0, C
+frmOPS = 0, 0, 0, 0, C, 0, 0, 0, 0, C

@@ -1,0 +1,10 @@
+Line 2: Could not create reference: '{00025600-0000-0000-C000-000000000046}#5.2#0'.
+Line 111: Class Crystal.CrystalReport of control rptbill was not a loaded control class.
+Line 114: The property name _ExtentX in rptbill is invalid.
+Line 115: The property name _ExtentY in rptbill is invalid.
+Line 116: The property name _Version in rptbill is invalid.
+Line 117: The property name WindowControlBox in rptbill is invalid.
+Line 118: The property name WindowMaxButton in rptbill is invalid.
+Line 119: The property name WindowMinButton in rptbill is invalid.
+Line 120: The property name WindowState in rptbill is invalid.
+Line 121: The property name PrintFileLinesPerPage in rptbill is invalid.
